@@ -1,25 +1,10 @@
 ---
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Domovska stranka Astro"
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro tutorial stránka</title>
-	</head>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="/">Domov</a></li>
-				<li><a href="/blog">Blog</a></li>
-				<li><a href="/about">O stránce</a></li>
-			</ul>
-		</nav>
-	</header>
-	<body>
-		<h1>Tutorial Astro Stránka</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}> <!-- Layout componentu jednodušše wrapnu okolo content struánky a je hotovo -->
+	<h2>Vložený content do layoutu</h2>
+</BaseLayout>

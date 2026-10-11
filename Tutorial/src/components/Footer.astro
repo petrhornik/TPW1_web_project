@@ -1,0 +1,26 @@
+---
+
+const platform = "github";
+const author = "petrhornik"
+
+import Social from "./Social.astro";
+
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+    <p>Astro tutorial project made by <a href=`https://www.${platform}.com/${author}`>{author}</a> as a preparation for semestral work for UHK TPW1</p>
+    <ul>
+        <Social platform="youtube" username="mkbhd"/>
+        <br>
+        <Social platform="github" username="petrhornik"/> <!-- Proměnné posílám do komponent pomocí HTML attributů (jako v Reactu) -->
+    </ul>
+</footer>
+

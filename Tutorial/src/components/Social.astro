@@ -1,0 +1,16 @@
+---
+// komponenta pro odkaz na soc. site
+
+const { platform, username } = Astro.props; // proměnné co se využijí v komponentu specifikuju do tagu jako klasické HTML attributy (stejně jako v Reactu)
+---
+<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+
+<style> /* Styling dávám přímo do komponenty či bokem je to jedno :P */
+  a {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #4c1d95;
+    text-decoration: none;
+    border-radius: 1rem;
+  }
+</style>

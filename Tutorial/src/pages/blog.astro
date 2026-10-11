@@ -1,38 +1,28 @@
 ---
+
+// importy jinných komponent/souborů
+
+import "../styles/global.css"       // klasicky ES6 importy
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "Blog stránky Astro";
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro tutorial stránka</title>
-	</head>
-	<body>
-        <header>
-		<nav>
-			<ul>
-				<li><a href="/">Domov</a></li>
-                <li><a href="/blog">Blog</a></li>
-				<li><a href="/about">O stránce</a></li>
-			</ul>
-		</nav>
-	</header>
-		<h1>Stránka Blogu</h1>
-        <hr>
-        <div>
-            <h3>Clanek 1</h3>
-            <li><a href="/posts/post_01">Odkaz na příspěvek</a></li>
-        </div>
-        <div>
-            <h3>Clanek 2</h3>
-            <li><a href="/posts/post_02">Odkaz na příspěvek</a></li>
-        </div>
-        <div>
-            <h3>Clanek 3</h3>
-            <li><a href="/posts/post_03">Odkaz na příspěvek</a></li>
-        </div>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<h1>Stránka Blogu</h1>
+    <hr>
+    <div>
+        <h3>Clanek 1</h3>
+        <li><a href="/posts/post_01">Odkaz na příspěvek</a></li>
+    </div>
+    <div>
+        <h3>Clanek 2</h3>
+        <li><a href="/posts/post_02">Odkaz na příspěvek</a></li>
+    </div>
+    <div>
+        <h3>Clanek 3</h3>
+        <li><a href="/posts/post_03">Odkaz na příspěvek</a></li>
+    </div>
+</BaseLayout>
+	

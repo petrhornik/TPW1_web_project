@@ -1,5 +1,10 @@
 ---
-// proměnné v astro a importy
+// importy jinných komponent/souborů
+
+import "../styles/global.css"       // klasicky ES6 importy
+import BaseLayout from "../layouts/BaseLayout.astro"
+
+// proměnné v astro
 const pageTitle = "O webu astro"
 
 const identity = {
@@ -17,59 +22,48 @@ const finished = false;
 const goal = 3;
 
 // funguje i při deklaraci CSS
-const skillColor = "yellow";
+const skillColor = "green";
+const fontWeight = 800;
+const textCase = "uppercase";
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-        <style define:vars=({skillColor})">     /* Tyto tagy jsou přímo z Astro, nejsou to klasické HTML style */
-            h1 {
-                color: purple;
-                font-size: 4rem;
-            }
-            .skill{
-                color: var(--skillColor);
-                font-weight: bold;
-            }
-        </style>
-	</head>
-	<body>
-        <header>
-		<nav>
-			<ul>
-				<li><a href="/">Domov</a></li>
-                <li><a href="/blog">Blog</a></li>
-				<li><a href="/about">O stránce</a></li>
-			</ul>
-		</nav>
-	</header>
-		<h1>{pageTitle}</h1>
-        <hr>
-        <p>Zkouším se naučit astro, abych mohl udělat projekt na TPW1</p>
-        <hr>
-        <h2>O mě</h2>
-        <p>Jmenuji se {identity.name} a pocházím z {identity.location}</p>
-        <p>Momentálně jsem: {identity.proffesion}</p>
-        <p>Mezi mé záliby patří:</p>
+
+
+<BaseLayout pageTitle={pageTitle}>
+
+    <style is:global define:vars={{skillColor, fontWeight, textCase}}>     /* Tyto tagy jsou přímo z Astro, nejsou to klasické HTML style */
+        /* is:global -> určuje mi že mnou specifikovaný styling zde je platný u této konkrétní stránky pro celek i s layoutem ne jen vložený content */
+        h1 {
+            color: purple;
+            font-size: 4rem;
+        }
+        .skill{
+             color: var(--skillColor);
+            font-weight: var(--fontWeight);
+            text-transform: var(--textCase);
+        }
+    </style>
+
+    <hr>
+    <p>Zkouším se naučit astro, abych mohl udělat projekt na TPW1</p>
+    <hr>
+    <h2>O mě</h2>
+    <p>Jmenuji se {identity.name} a pocházím z {identity.location}</p>
+    <p>Momentálně jsem: {identity.proffesion}</p>
+    <p>Mezi mé záliby patří:</p>
+    <ul>
+        {identity.hobbies.map(item => {      // Musím použít .map protože forEach mi sice provede operace s každou položkou, ale nic nevrací - map projede všechny položky a následně je vrací
+               return <li>{item}</li>
+        })}
+    </ul>
+    <p>Mé "dovednosti":</p>
         <ul>
-            {identity.hobbies.map(item => {      // Musím použít .map protože forEach mi sice provede operace s každou položkou, ale nic nevrací - map projede všechny položky a následně je vrací
-                return <li>{item}</li>
-            })}
-        </ul>
-        <p>Mé "dovednosti":</p>
-        <ul>
-            {skills.map(item => <li class="skill">{item}</li>)}
-        </ul>
-        <hr>
-        <p>Ukázka ternary/true evaluace</p>
-        {happy && <p>Mám dobrou náladu při učení základů Astro</p>}
-        {finished && <p>Tutorial mám hotový</p>}
-        {goal === 3 ? <p>Můj cíl jsou 3 dny</p> : <p>Můj cíl nejsou 3 dny!</p>}
-	</body>
-</html>
+        {skills.map(item => <li class="skill">{item}</li>)}
+    </ul>
+    <hr>
+    <p>Ukázka ternary/true evaluace</p>
+    {happy && <p>Mám dobrou náladu při učení základů Astro</p>}
+    {finished && <p>Tutorial mám hotový</p>}
+    {goal === 3 ? <p>Můj cíl jsou 3 dny</p> : <p>Můj cíl nejsou 3 dny!</p>}
+</BaseLayout>
