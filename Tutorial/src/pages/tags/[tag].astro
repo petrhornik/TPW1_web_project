@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPost from '../../components/BlogPost.astro';
+
+export async function getStaticPaths() {    // vytvoří možné routy (možné stránky) na access přes 1 soubor
+    
+    // opět import všech postů z /posts a následně je posílám do všech "rout" jako props u komponent
+    const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+
+    // vyčlenění všech unikátních tagů
+    const uniqueTags = [...new Set(allPosts.map((post: any) => {
+        return post.frontmatter.tags
+    }).flat())]
+
+    // vytvářené/dostupné routy na které se můžu v URL odkazovat místo [tag]
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post: any) => {
+        return post.frontmatter.tags.includes(tag);
+    })
+        return {
+            params: {tag},
+            props: {posts: filteredPosts},
+        }
+  })
+}
+
+const { tag } = Astro.params;   // to co mám v URL routě v prohlížeči na místě místo [tag]
+                                // funguje stejně jako req.params z ExpressJS
+
+const { posts } = Astro.props;  // to co jsem poslal z getStaticPaths() do props
+
+---
+
+
+<BaseLayout pageTitle={tag}>
+  <p>Posts tagged with {tag}</p>
+  <ul>
+    {
+        posts.map((post: any) => {
+            return <BlogPost url={post.url} title={post.frontmatter.title} author={post.frontmatter.author} />
+        })
+    }
+  </ul>
+</BaseLayout>

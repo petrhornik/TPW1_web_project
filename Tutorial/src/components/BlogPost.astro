@@ -1,0 +1,19 @@
+---
+
+const {url, title, author} = Astro.props;
+
+---
+
+<style>
+    .blogpost{
+        padding: 0.5rem 1rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-top: 2rem;
+    }
+</style>
+
+<div class="blogpost">
+    <h3>{title}</h3>
+    <p><strong>Autor: </strong>{author}</p>
+    <a href={url}>Odkaz na clanek</a>
+</div>

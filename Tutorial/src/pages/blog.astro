@@ -4,6 +4,11 @@
 
 import "../styles/global.css"       // klasicky ES6 importy
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+
+// import objektů pro všechny položky v /posts
+
+const allPosts = Object.values(import.meta.glob("./posts/*.md", {eager: true}));
 
 const pageTitle = "Blog stránky Astro";
 
@@ -12,17 +17,10 @@ const pageTitle = "Blog stránky Astro";
 <BaseLayout pageTitle={pageTitle}>
 	<h1>Stránka Blogu</h1>
     <hr>
-    <div>
-        <h3>Clanek 1</h3>
-        <li><a href="/posts/post_01">Odkaz na příspěvek</a></li>
-    </div>
-    <div>
-        <h3>Clanek 2</h3>
-        <li><a href="/posts/post_02">Odkaz na příspěvek</a></li>
-    </div>
-    <div>
-        <h3>Clanek 3</h3>
-        <li><a href="/posts/post_03">Odkaz na příspěvek</a></li>
-    </div>
+    {
+        allPosts.map((post: any) => {
+            return <BlogPost url={post.url} title={post.frontmatter.title} author={post.frontmatter.author} />;
+        })
+    }
 </BaseLayout>
 	

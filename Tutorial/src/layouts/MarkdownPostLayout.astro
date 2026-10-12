@@ -1,12 +1,15 @@
 ---
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+
 const { frontmatter } = Astro.props; // zastává cel můj .md soubor a jeho obsah
 ---
 
-<meta charset="utf-8" />
-<h1>{frontmatter.title}</h1>
-<p><strong>Popisek: </strong>{frontmatter.description}</p>
-<p>Written by {frontmatter.author}</p>
-<p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-<p><strong>Tagy: </strong>{frontmatter.tags.join(", ")}</p>
-<img src={frontmatter.image.url} alt={frontmatter.image.alt} width="700rem">
-<slot />
+<BaseLayout pageTitle={frontmatter.title}>
+    <p><strong>Popisek: </strong>{frontmatter.description}</p>
+    <p>Written by {frontmatter.author}</p>
+    <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <p><strong>Tagy: </strong>{frontmatter.tags.join(", ")}</p>
+    <img src={frontmatter.image.url} alt={frontmatter.image.alt} width="700rem">
+    <slot />
+</BaseLayout>
