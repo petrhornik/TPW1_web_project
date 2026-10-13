@@ -3,8 +3,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Domovska stranka Astro"
 
+// import Preact komponenty
+
+import Greeting from '../components/Greeting';
+
 ---
 
 <BaseLayout pageTitle={pageTitle}> <!-- Layout componentu jednodušše wrapnu okolo content struánky a je hotovo -->
 	<h2>Vložený content do layoutu</h2>
+	<Greeting messages={["Hi", "Hello", "Howdy", "Hey there"]} />
 </BaseLayout>

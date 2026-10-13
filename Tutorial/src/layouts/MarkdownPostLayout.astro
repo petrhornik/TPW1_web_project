@@ -5,11 +5,42 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const { frontmatter } = Astro.props; // zastává cel můj .md soubor a jeho obsah
 ---
 
+
+<style>
+    .tag_list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 2rem;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        padding: 1rem;
+        transition: 0.5s;
+    }
+
+    .tag:hover {
+        transform: translateY(-0.5rem);
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+
+
 <BaseLayout pageTitle={frontmatter.title}>
     <p><strong>Popisek: </strong>{frontmatter.description}</p>
     <p>Written by {frontmatter.author}</p>
     <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-    <p><strong>Tagy: </strong>{frontmatter.tags.join(", ")}</p>
+    <div class="tag_list">
+        <p><strong>Tagy příspěvku: </strong></p>
+        {frontmatter.tags.map((tag: string) => (
+        <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+        ))}
+    </div>
     <img src={frontmatter.image.url} alt={frontmatter.image.alt} width="700rem">
     <slot />
 </BaseLayout>

@@ -1,0 +1,47 @@
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const allPosts = Object.values(import.meta.glob("../posts/*.md", {eager: true}));
+
+const pageTitle = "Index tagů";
+const allTags = [...new Set(allPosts.map((post: any) => {
+    return post.frontmatter.tags
+}).flat())]
+
+---
+
+<!--  tato stránka se vyrenderuje kdy si v URL odkážu jen na název složky (root stránka celé složky) -->
+
+<style>
+    .tag_list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 2rem;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        padding: 1rem;
+        transition: 0.5s;
+    }
+
+    .tag:hover {
+        transform: translateY(-0.5rem);
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>
+
+<BaseLayout pageTitle={pageTitle} >
+    <div class="tag_list">
+        {
+            allTags.map((tag: any) => (
+                <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+            ))
+        }
+    </div>
+</BaseLayout>

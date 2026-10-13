@@ -39,3 +39,30 @@
   - název použitý co dám v URL routě v prohlížeči míst [tag] se mi následně pomocí Astro.params dostane do onoho souboru a můžu s contentem manipulovat
     - steně jako raq.params v ExpressJS
     - do každé routy potom lze přidat opět propy jako do samostatných komponent a ty si následně v tempatu dole rozepsat viz.: [tag].astro
+
+# Index page ve složce
+
+  - když mám v /pages umístěnou složku s více soubory
+    - dynamicky routing, posty (.md), apod.
+  - můžu přidat index.astro a to se zobrazí, když v URL dám jen název složky bez pokračování
+
+  - např.: když místo /tags/neco dám jen /tags tak se mi právě vyrenderuje index se vložce /tags a když neexistuje vátí se not found
+
+  - jedná o feature ze static routeru co mi poskytuje Astro
+
+# RSS feed integrace
+
+  - Astro má vlastní package pro implementaci RSS fce. např. pro blogové weby
+    - nejdřív vytvořím speciální .xml feed dokument přímo v pages
+      - uvnitř je příkladový kód
+
+    - následně musím přidat site parament do astro.config.mjs
+    - hotovka
+
+# Přidání iteraktivity pomocí UI frameworku
+
+tip - v tutorialu se používá Preact (podobné klasickému Reactu)
+
+  - UI framework přidám pomocí npx astro add ...
+  - Klasika jako v Reactu -> tvořím interaktivní kompletně client side rendered komponenty
+    - useState returns :P
