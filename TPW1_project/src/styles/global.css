@@ -4,17 +4,121 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
-    list-style: none;
 }
 
 :root {
+
+    /* mezery */
+
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* velikosti textu */
+
+
+
+    /* barvy */
+
     &[data-theme="light"] {
-        --text-primary: white;
-        --bg-color: black;
+        --color-primary: #8D91C7;
+        --color-primary-hover: #6b6e96;
+        --color-secondary: #6E75A8;
+        --color-surface: #3E1929;
+        --color-background: #E5D0CC;
+        --color-component-background: #845A6D;
+        --color-text: #1c1c1c;
+        --color-text-light: #FFF8F2;
     }
 
     &[data-theme="dark"] {
-        --text-primary: black;
-        --bg-color: white;
+        --primary: black;
+        --secondary: white;
+        --warning: yellow;
+        --danger: red;
+        --success: green;
     }
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Cambay", sans-serif;
+}
+
+p, blockquote, a{
+    font-family: "Average Sans", sans-serif;
+}
+
+nav ul li a{
+    font-weight: bold;
+}
+
+nav > ul{
+    list-style: none;
+}
+
+/* PC LAYOUT KONFIGURACE */
+
+main{
+    margin: 0 auto;
+    width: 85vw;
+}
+
+/* defaultní styling všech hero sekcí */
+
+.hero{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.hero-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+}
+
+.hero-content h1{
+    font-size: 5rem;
+}
+
+.hero-content img {
+    width: 25rem;
+}
+
+.hero-button{
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--color-text-light);
+    font-size: 2rem;
+    background-color: var(--color-primary);
+    padding: var(--spacing-sm);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1rem;
+    transition: 0.3s;
+}
+
+.hero-button:hover{
+    transform: scale(0.95);
+    background-color: var(--color-primary-hover);
+}
+
+.hero-direction-pointer{
+    width: 10rem;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.hero-direction-pointer img{
+    width: 75%;
 }

@@ -1,5 +1,32 @@
 /* styling pro celý header */
 
-header{
-    background-color: var(--bg-color);
+header {
+    background-color: var(--color-surface);
+    padding: var(--spacing-md) var(--spacing-lg);
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-text-light);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.menu-list{
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.menu-list li{
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu-list li:hover{
+    transform: translateY(-0.2rem);
+}
+
+.menu-list li a{
+    color: var(--color-text-light);
 }
