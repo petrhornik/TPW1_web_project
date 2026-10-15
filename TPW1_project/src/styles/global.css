@@ -1,5 +1,20 @@
+/* reset defaultních stylů */
+
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    &[data-theme="light"] {
+        --text-primary: white;
+        --bg-color: black;
+    }
+
+    &[data-theme="dark"] {
+        --text-primary: black;
+        --bg-color: white;
+    }
 }

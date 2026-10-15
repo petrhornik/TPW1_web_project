@@ -1,0 +1,14 @@
+{
+    "itemList":[
+        {
+            "id": 0,
+            "name": "Product1",
+            "desc": "Popisek 1. produktu"
+        },
+        {
+            "id": 1,
+            "name": "Product2",
+            "desc": "Popisek 2. produktu"
+        }
+    ]
+}
