@@ -13,49 +13,84 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		<img src="/siteContent/index_hero_logo.png" alt="Úvodní obrázek na domovské stránce.">
     </div>
 	<div class="hero-direction-pointer">
-		<img src="/siteContent/icons/arrow-down-short.svg" alt="Šipka odkazující dolů">
-		<p>Další informace</p>
+		<a href="#page-content">
+			<img src="/siteContent/icons/arrow-down-short.svg" alt="Šipka odkazující dolů">
+			<p>Další informace</p>
+		</a>
 	</div>
 </section>
-<main>
+<main class="page-content" id="page-content">
 	<section class="site-introduction">
-		<h2>Co zde najdete?</h2>
-		<div>
-			<article>
-				<h3>Návod na přechod</h3>
-				<p>Máme zde podrobný návod, který obsahuje:</p>
-				<ol>
-					<li><p>Co je to GNU/Linux</p></li>
-					<li><p>Jak vybrat tu správnou linuxovou distribuci</p></li>
-					<li><p>Jak na tvorbu instalačního média a instalaci</p></li>
-					<li><p>Instatace ovladačů (jen u některých případů)</p></li>
-					<li><p>Co a jak po dokončení instalace</p></li>
-				</ol>
+		<h2>Co zde najdete?_</h2>
+		<div class="site-introduction-content">
+			<article class="content-box">
+				<img src="/siteContent/introPage_switch.png" alt="">
+				<div class="content-box-texts">
+					<div class="content-box-headline">
+						<h3>Návod na přechod</h3>
+						<p>Zvažujete, že chcete opustit software který nerespektuje vaše soukromí a zbytečně zpomaluje vaše zařízení? Máme pro vás bezvadnou alternativu, která je plně schopná toto splnit!</p>
+					</div>
+					<hr>
+					<div class="content-box-main">
+						<p>Máme zde podrobný návod, který obsahuje:</p>
+						<ol>
+							<li><p>Co je to GNU/Linux</p></li>
+							<li><p>Jak vybrat tu správnou linuxovou distribuci</p></li>
+							<li><p>Jak na tvorbu instalačního média a instalaci</p></li>
+							<li><p>Instatace ovladačů (jen u některých případů)</p></li>
+							<li><p>Co a jak po dokončení instalace</p></li>
+						</ol>
+					</div>
+				</div>
 			</article>
-			<article>
-				<h3>Ukázky distribucí</h3>
-				<p>Máme zde rozbor na zástupce určitých distribucí, takže si knim můžete načíst něco víc, než se pro 1 definitivně rezhodnete.</p>
-				<p>Každý rozbor obsahuje:</p>
-				<ol>
-					<li><p>Obecný popis distribuce</p></li>
-					<li><p>Klady a zápory</p></li>
-					<li><p>Odhad minimální nutné technické způsobilosti uživatele</p></li>
-					<li><p>Naše osobní zkušenost při testování</p></li>
-					<li><p></p></li>
-				</ol>
+			<article class="content-box">
+				<img src="" alt="">
+				<div class="content-box-texts">
+					<div class="content-box-headline">
+						<h3>Ukázky distribucí</h3>
+						<p>Máme zde rozbor na zástupce určitých distribucí, takže si knim můžete načíst něco víc, než se pro 1 definitivně rezhodnete.</p>
+					</div>
+					<hr>
+					<div class="content-box-main">
+						<p>Každý rozbor obsahuje:</p>
+						<ol>
+							<li><p>Obecný popis distribuce</p></li>
+							<li><p>Klady a zápory</p></li>
+							<li><p>Odhad minimální nutné technické způsobilosti uživatele</p></li>
+							<li><p>Naše osobní zkušenost při testování</p></li>
+							<li><p></p></li>
+						</ol>
+					</div>
+				</div>
 			</article>
-			<article>
-				<h3>Příručka uživatele</h3>
-				<ol>
-					<li><p>Časté problémy v určitých distribucích a jak je řešit</p></li>
-					<li><p>Sada základních terminálových příkazů</p></li>
-					<li><p>Doporučené aplikace (vychytávky a alternativy)</p></li>
-					<li><p>Další BRZY!!</p></li>
-				</ol>
+			<article class="content-box">
+				<img src="" alt="">
+				<div class="content-box-texts">
+					<div class="content-box-headline">
+						<h3>Příručka uživatele</h3>
+					</div>
+					<hr>
+					<div class="content-box-main">
+						<ol>
+							<li><p>Časté problémy v určitých distribucích a jak je řešit</p></li>
+							<li><p>Sada základních terminálových příkazů</p></li>
+							<li><p>Doporučené aplikace (vychytávky a alternativy)</p></li>
+							<li><p>Další BRZY!!</p></li>
+						</ol>
+					</div>
+				</div>
 			</article>
-			<article>
-				<h3>Komunita</h3>
-				<p>Pokud si s čímkoli nebudete vědět rady, tak se s námi neváhejte spojit kdykoli na některé z naších platforem. Těšíme se na vás.</p>
+			<article class="content-box">
+				<img src="" alt="">
+				<div class="content-box-texts">
+					<div class="content-box-headline">
+						<h3>Komunita</h3>
+						<p>Pokud si s čímkoli nebudete vědět rady, tak se s námi neváhejte spojit kdykoli na některé z naších platforem. Těšíme se na vás.</p>
+					</div>
+					<hr>
+					<div class="content-box-main">
+					</div>
+				</div>
 			</article>
 		</div>
 	</section>

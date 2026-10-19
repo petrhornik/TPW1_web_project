@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -15,10 +16,14 @@
     --spacing-md: 1rem;
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
+    --spacing-xxl: 5rem;
+    --spacing-3xl: 10rem;
 
     /* velikosti textu */
 
+    /* další data pro správnou funkcionalitu css */
 
+    --navbar-height: 4.5rem;
 
     /* barvy */
 
@@ -27,8 +32,8 @@
         --color-primary-hover: #6b6e96;
         --color-secondary: #6E75A8;
         --color-surface: #3E1929;
-        --color-background: #E5D0CC;
-        --color-component-background: #845A6D;
+        --color-background: #F9DBBD;
+        --color-component-background: #F0E3D2;
         --color-text: #1c1c1c;
         --color-text-light: #FFF8F2;
     }
@@ -85,7 +90,7 @@ main{
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    gap: 5rem;
+    gap: var(--spacing-xxl);
 }
 
 .hero-content h1{
@@ -121,4 +126,56 @@ main{
 
 .hero-direction-pointer img{
     width: 75%;
+}
+
+/* styling main contentu hl. index page */
+
+.page-content{
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: calc(var(--navbar-height) + 1rem);
+}
+
+
+.site-introduction h2{
+    font-size: 3rem;
+    text-decoration: 2px solid var(--color-secondary) underline;
+    text-underline-offset: 0.5rem;
+}
+
+.content-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-3xl);
+    background-color: var(--color-component-background);
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-lg);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.content-box img{
+    width: 25%;
+}
+
+.content-box-texts{
+    width: 50%;
+}
+
+.content-box-headline{
+    margin-bottom: var(--spacing-md);
+}
+
+.content-box-headline h3{
+    font-size: 1.8rem;
+}
+
+.content-box-main{
+    margin-top: 1rem;
+}
+
+.content-box ol {
+    margin-top: var(--spacing-sm);
+    padding-left: var(--spacing-lg);
 }

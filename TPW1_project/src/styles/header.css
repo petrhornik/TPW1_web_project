@@ -6,21 +6,28 @@ header {
     position: sticky;
     top: 0;
 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     color: var(--color-text-light);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.website-name{
+    display: flex;
+    justify-self: flex-start;
+}
+
 .menu-list{
     display: flex;
     gap: var(--spacing-md);
+    justify-self: center;
 }
 
 .menu-list li{
     cursor: pointer;
     transition: 0.2s;
+    padding: 0.5rem;
 }
 
 .menu-list li:hover{
@@ -29,4 +36,9 @@ header {
 
 .menu-list li a{
     color: var(--color-text-light);
+}
+
+.lang-selector{
+    display: flex;
+    justify-self: flex-end;
 }
