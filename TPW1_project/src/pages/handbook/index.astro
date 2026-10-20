@@ -1,7 +1,19 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import linuxHandbookData from "../../data/linuxHandbook.json"
+
 ---
 
 <BaseLayout>
     <h1>Handbook hl. strana</h1>
+    <section class="page-content">
+        <aside>
+            <ul>
+                {JSON.stringify(linuxHandbookData)}
+            </ul>
+        </aside>
+        <section class="content-box">
+
+        </section>
+    </section>
 </BaseLayout>

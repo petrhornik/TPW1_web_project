@@ -1,35 +1,852 @@
 {
-    "distros": [
-        {
-            "name": "Example",
-            "developer": "Example dev",
-            "beginner_friendly_rating": 5,
-            "primary_de": "KDE",
-            "country_origin": "Czechia",
-            "details": {
-                "description": "lorem ipsum dolor sit amet...",
-                "pros": [{
-                    "title": "pro1",
-                    "reason": "reason why pro1"
-                }],
-                "cons": [{
-                    "title": "con1",
-                    "reason": "reason why con1"
-                }],
-                "our_experience": "",
-                "hardware_requirements": {
-                    "cpu": "info",
-                    "ram": "info",
-                    "gpu": "info",
-                    "storage": 15
-                },
-                "needed_knowledge_tips": [
-                    {
-                        "title": "tip1",
-                        "description": "desc1"
-                    }
-                ]
-            } 
-        }
-    ]
+  "distros": [
+    {
+      "name": "Linux Mint",
+      "id": "linux-mint",
+      "developer": "Linux Mint Team",
+      "beginner_friendly_rating": 5,
+      "primary_de": "Cinnamon",
+      "country_origin": "Irsko",
+      "details": {
+        "description": "Linux Mint je distribuce založená na Ubuntu, která se zaměřuje na jednoduché a pohodlné používání počítače. Prostředí Cinnamon nabízí tradiční nabídku aplikací, hlavní panel a přehledné nastavení, takže přechod z Windows bývá snadný. Pro instalaci aplikací nabízí přehledného grafického Správce softwaru i klasický balíčkovací systém APT. Součástí běžného pracovního postupu jsou nástroje Timeshift pro snímky systému a Správce aktualizací, díky nimž se uživatel může lépe připravit na případné problémy. Hodí se zejména pro domácí počítače, školní práci a každého, kdo chce začít s Linuxem bez zdlouhavého nastavování.",
+        "website": "https://linuxmint.com/",
+        "pros": [
+          {
+            "title": "Známé ovládání",
+            "reason": "Cinnamon nabízí klasické rozvržení plochy s nabídkou Start a panelem."
+          },
+          {
+            "title": "Snadný začátek",
+            "reason": "Po instalaci je k dispozici správce aktualizací, grafická správa ovladačů a řada běžných aplikací."
+          },
+          {
+            "title": "Stabilní základ",
+            "reason": "Vydání vycházejí z dlouhodobě podporovaných verzí Ubuntu."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Starší verze programů",
+            "reason": "Důraz na stabilitu znamená, že některé aplikace a systémové balíčky nejsou nejnovější."
+          },
+          {
+            "title": "Méně vhodný pro experimentátory",
+            "reason": "Kdo chce nejnovější technologie ihned po vydání, může dát přednost rolling-release distribuci."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový procesor Intel nebo AMD",
+          "ram": "2 GB minimum, 4 GB a více doporučeno",
+          "gpu": "Běžná integrovaná grafika, rozlišení alespoň 1024 × 768",
+          "storage": 20
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "Správa softwaru",
+            "description": "Programy instaluj nejprve přes Správce softwaru nebo APT; nevyhledávej náhodné instalační skripty."
+          },
+          {
+            "title": "Aktualizace",
+            "description": "Pravidelně používej Správce aktualizací a před většími změnami si vytvoř zálohu."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ubuntu",
+      "id": "ubuntu",
+      "developer": "Canonical a komunita Ubuntu",
+      "beginner_friendly_rating": 5,
+      "primary_de": "GNOME",
+      "country_origin": "Spojené království",
+      "details": {
+        "description": "Ubuntu patří mezi nejznámější linuxové distribuce a nabízí širokou komunitu, návody i podporu běžného hardwaru. Výchozí desktop GNOME klade důraz na jednoduchost a odlišuje se od klasického rozložení Windows. Programy lze získávat prostřednictvím APT, Snapu a případně dalších formátů, takže je k dispozici široká nabídka desktopových i vývojářských aplikací. Ubuntu vydává pravidelné verze a dlouhodobě podporovaná vydání LTS, mezi nimiž si uživatel vybírá podle požadavků na aktuálnost a stabilitu. Jde o univerzální systém vhodný pro školu, práci, programování i běžné domácí použití.",
+        "website": "https://ubuntu.com/desktop",
+        "pros": [
+          {
+            "title": "Velká komunita",
+            "reason": "Na běžné problémy lze snadno najít návody a diskuse."
+          },
+          {
+            "title": "Podpora aplikací",
+            "reason": "Řada výrobců a vývojářů poskytuje balíčky či návody přímo pro Ubuntu."
+          },
+          {
+            "title": "Vydání LTS",
+            "reason": "Dlouhodobě podporované verze jsou vhodné pro stabilní každodenní práci."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Snap nemusí vyhovovat každému",
+            "reason": "Některé aplikace se distribuují přes Snap, který se chová jinak než klasické systémové balíčky."
+          },
+          {
+            "title": "Vyšší nároky GNOME",
+            "reason": "Na starších počítačích může být plynulejší lehčí varianta Ubuntu."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový dvoujádrový procesor přibližně 2 GHz nebo lepší",
+          "ram": "6 GB doporučeno pro Ubuntu Desktop 26.04/26.10",
+          "gpu": "Integrovaná nebo dedikovaná grafika kompatibilní s Linuxem",
+          "storage": 25
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "LTS a běžná vydání",
+            "description": "LTS má delší podporu; meziverze přinášejí novinky častěji, ale vyžadují častější přechody."
+          },
+          {
+            "title": "APT a Snap",
+            "description": "Rozlišuj balíčky instalované přes APT a aplikace dodávané jako Snap."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fedora Workstation",
+      "id": "fedora-workstation",
+      "developer": "Fedora Project (s podporou Red Hatu)",
+      "beginner_friendly_rating": 4,
+      "primary_de": "GNOME",
+      "country_origin": "USA",
+      "details": {
+        "description": "Fedora Workstation je moderní distribuce zaměřená na otevřené technologie, bezpečnost a aktuální software. Často přináší nové verze GNOME, jádra a vývojářských nástrojů dříve než konzervativnější distribuce. Fedora používá správce balíčků DNF a ve výchozím stavu poskytuje poměrně čisté prostředí GNOME. Významnou roli v ní hrají moderní technologie, například Wayland, PipeWire a bezpečnostní systém SELinux. Díky pravidelnému vydávání nových verzí ji ocení zejména lidé, kteří chtějí aktuální nástroje pro vývoj softwaru a jsou ochotni průběžně aktualizovat systém.",
+        "website": "https://fedoraproject.org/workstation/",
+        "pros": [
+          {
+            "title": "Moderní software",
+            "reason": "Nové verze desktopu a systémových technologií přicházejí poměrně rychle."
+          },
+          {
+            "title": "Dobrá volba pro vývoj",
+            "reason": "Nabízí kvalitní nástroje pro kontejnery, programování a práci s terminálem."
+          },
+          {
+            "title": "Čisté GNOME",
+            "reason": "Prostředí není výrazně upravené a zachovává původní způsob ovládání."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Častější upgrady",
+            "reason": "Jednotlivá vydání mají kratší životnost než dlouhodobě podporované distribuce."
+          },
+          {
+            "title": "Některé kodeky navíc",
+            "reason": "Pro část multimediálního softwaru může být nutné povolit další repozitáře."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "Moderní 64bitový procesor Intel nebo AMD",
+          "ram": "4 GB minimum pro základní použití, 8 GB pohodlnější",
+          "gpu": "Grafika podporující moderní GNOME a Wayland",
+          "storage": 25
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "DNF",
+            "description": "Správce balíčků Fedora se jmenuje DNF; namísto apt install použiješ dnf install."
+          },
+          {
+            "title": "Další repozitáře",
+            "description": "Před povolením RPM Fusion nebo jiného zdroje softwaru si ověř jeho důvěryhodnost."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fedora KDE",
+      "id": "fedora-kde",
+      "developer": "Fedora Project (s podporou Red Hatu)",
+      "beginner_friendly_rating": 4,
+      "primary_de": "KDE Plasma",
+      "country_origin": "USA",
+      "details": {
+        "description": "Oficiální varianta Fedory s prostředím KDE Plasma kombinuje aktuální systém s velmi přizpůsobitelnou pracovní plochou. Je vhodná pro uživatele, kteří chtějí moderní Linux a zároveň tradiční panel, nabídku aplikací a pokročilé nastavení. Vedle grafického správce aplikací Discover lze software spravovat i v terminálu pomocí DNF. Plasma nabízí widgety, virtuální plochy, pokročilé klávesové zkratky a široké možnosti přizpůsobení vzhledu. Varianta je zajímavá pro uživatele přecházející z Windows i pro ty, kteří chtějí kombinaci rychlého vývoje Fedory s flexibilním desktopem KDE.",
+        "website": "https://fedoraproject.org/kde/",
+        "pros": [
+          {
+            "title": "Velká přizpůsobitelnost",
+            "reason": "KDE Plasma umožňuje podrobně upravovat panely, zkratky, vzhled i chování oken."
+          },
+          {
+            "title": "Aktuální technologie",
+            "reason": "Fedora rychle nasazuje nová vydání KDE a dalších komponent."
+          },
+          {
+            "title": "Oficiální edice",
+            "reason": "Nejde o neoficiální úpravu, ale o plnohodnotnou desktopovou variantu projektu Fedora."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Mnoho možností nastavení",
+            "reason": "Rozsáhlá konfigurace může na začátku působit nepřehledně."
+          },
+          {
+            "title": "Pravidelné aktualizace vydání",
+            "reason": "Je třeba počítat s přechodem na novou verzi přibližně jednou za několik měsíců až rok."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "Moderní 64bitový procesor Intel nebo AMD",
+          "ram": "4 GB minimum pro základní použití, 8 GB doporučeno",
+          "gpu": "Integrovaná grafika s podporou akcelerovaného desktopu",
+          "storage": 25
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "KDE Discover a DNF",
+            "description": "Aplikace lze instalovat graficky přes Discover nebo v terminálu přes DNF."
+          },
+          {
+            "title": "Wayland a X11",
+            "description": "Zjisti, jaký typ grafické relace používáš; může to pomoci při řešení potíží s aplikacemi."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Debian",
+      "id": "debian",
+      "developer": "Projekt Debian",
+      "beginner_friendly_rating": 4,
+      "primary_de": "GNOME (výchozí v instalátoru)",
+      "country_origin": "USA",
+      "details": {
+        "description": "Debian je komunitní distribuce známá svou stabilitou a rozsáhlými repozitáři. Slouží jako základ pro Ubuntu a mnoho dalších systémů; při instalaci si můžeš vybrat GNOME, KDE Plasma, Xfce i další desktopy. Pro správu softwaru využívá APT a u stabilních vydání klade důraz na bezpečnostní opravy a předvídatelné chování systému. Uživatel si při instalaci volí grafické prostředí nebo může vytvořit čistě serverový systém bez plochy. Debian je dobrým základem pro učení administrace Linuxu, provoz serverů a běžnou práci tam, kde je důležitější spolehlivost než úplně nejnovější software.",
+        "website": "https://www.debian.org/",
+        "pros": [
+          {
+            "title": "Spolehlivost",
+            "reason": "Stabilní větev upřednostňuje důkladně prověřené balíčky."
+          },
+          {
+            "title": "Široké využití",
+            "reason": "Debian se dobře hodí na pracovní stanice, servery i menší zařízení."
+          },
+          {
+            "title": "Volnost výběru prostředí",
+            "reason": "Instalátor umožňuje zvolit desktop podle výkonu počítače a osobních preferencí."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Konzervativní balíčky",
+            "reason": "Software ve stabilní větvi může být starší než v distribucích s častým vydáváním."
+          },
+          {
+            "title": "Méně přednastavených funkcí",
+            "reason": "Některé ovladače, balíčky nebo vzhled systému si uživatel dolaďuje sám."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový procesor Intel nebo AMD; podporovány jsou i další architektury",
+          "ram": "2 GB pro lehčí desktop, 4 GB a více pro GNOME",
+          "gpu": "Integrovaná grafika; záleží na vybraném desktopu",
+          "storage": 20
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "Stable, Testing, Unstable",
+            "description": "Pro běžný počítač je nejbezpečnějším začátkem stabilní větev Debianu."
+          },
+          {
+            "title": "APT a repozitáře",
+            "description": "Nauč se příkazy apt update, apt upgrade a apt install a rozlišuj důvěryhodné zdroje balíčků."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Kubuntu",
+      "id": "kubuntu",
+      "developer": "Komunita Kubuntu a projekt Ubuntu",
+      "beginner_friendly_rating": 5,
+      "primary_de": "KDE Plasma",
+      "country_origin": "Spojené království",
+      "details": {
+        "description": "Kubuntu je oficiální varianta Ubuntu s grafickým prostředím KDE Plasma. Zachovává rozsáhlou softwarovou základnu Ubuntu a přidává plochu s tradičním panelem, nabídkou aplikací a bohatými možnostmi přizpůsobení. Programy lze instalovat přes grafický obchod Discover nebo správce balíčků APT, přičemž systém využívá ekosystém a vydávací cyklus Ubuntu. KDE Plasma dovoluje měnit chování oken, plochy, panely i zkratky bez nutnosti zásahů do systémových souborů. Kubuntu je proto praktickou volbou pro domácí a školní počítače i pro uživatele, kteří upřednostňují prostředí podobné tradičnímu desktopu.",
+        "website": "https://kubuntu.org/",
+        "pros": [
+          {
+            "title": "Známé rozhraní",
+            "reason": "KDE Plasma je přívětivé pro uživatele zvyklé na Windows."
+          },
+          {
+            "title": "Zázemí Ubuntu",
+            "reason": "Využívá široké repozitáře, návody a komunitní podporu Ubuntu."
+          },
+          {
+            "title": "Přizpůsobitelný desktop",
+            "reason": "Můžeš upravit chování oken, panely, témata a klávesové zkratky."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Množství voleb",
+            "reason": "Pokročilé možnosti KDE mohou méně zkušené uživatele zahltit."
+          },
+          {
+            "title": "Pro staré PC jsou lepší lehčí varianty",
+            "reason": "Plasma obvykle potřebuje více prostředků než LXQt nebo Xfce."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový dvoujádrový procesor",
+          "ram": "4 GB pro základní práci, 8 GB pohodlnější",
+          "gpu": "Grafika s podporou akcelerovaného desktopu",
+          "storage": 25
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "Ubuntu návody",
+            "description": "Většina návodů pro Ubuntu platí i pro Kubuntu, ale nastavení desktopu se liší."
+          },
+          {
+            "title": "KDE nastavení",
+            "description": "Před instalací neznámých motivů a widgetů si ověř jejich zdroj."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Xubuntu",
+      "id": "xubuntu",
+      "developer": "Komunita Xubuntu a projekt Ubuntu",
+      "beginner_friendly_rating": 5,
+      "primary_de": "Xfce",
+      "country_origin": "Spojené království",
+      "details": {
+        "description": "Xubuntu staví na Ubuntu, ale místo GNOME používá lehčí prostředí Xfce. Nabízí jednoduché ovládání a hodí se pro uživatele, kteří chtějí svižný desktop bez velkých vizuálních efektů. Xfce používá lehké panely, nabídku aplikací a správce souborů Thunar, přitom zachovává možnost přizpůsobení základních prvků plochy. Díky příbuznosti s Ubuntu lze instalovat většinu stejného softwaru a využívat správce balíčků APT. Xubuntu může dávat smysl na starších noteboocích, v jednoduchých pracovních stanicích nebo lidem, kteří preferují rychlost a přehlednost před grafickými efekty.",
+        "website": "https://xubuntu.org/",
+        "pros": [
+          {
+            "title": "Nižší hardwarové nároky",
+            "reason": "Xfce obvykle spotřebuje méně prostředků než náročnější grafická prostředí."
+          },
+          {
+            "title": "Jednoduché ovládání",
+            "reason": "Panely, nabídka aplikací a správce souborů se rychle učí."
+          },
+          {
+            "title": "Balíčky Ubuntu",
+            "reason": "K dispozici je velké množství programů a návodů pro Ubuntu."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Konzervativnější vzhled",
+            "reason": "Výchozí prostředí je spíš funkční než efektní."
+          },
+          {
+            "title": "Méně integrovaných efektů",
+            "reason": "Některé pokročilé funkce je potřeba doinstalovat nebo nastavit ručně."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový dvoujádrový procesor",
+          "ram": "2 GB pro jednoduché použití, 4 GB doporučeno",
+          "gpu": "Běžná integrovaná grafika",
+          "storage": 20
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "Úprava panelů",
+            "description": "Ve správci nastavení Xfce můžeš snadno měnit panely a spouštěče."
+          },
+          {
+            "title": "Vhodnost pro starší PC",
+            "description": "Kromě RAM zvaž stav disku; výměna HDD za SSD může výkon výrazně zlepšit."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Lubuntu",
+      "id": "lubuntu",
+      "developer": "Komunita Lubuntu a projekt Ubuntu",
+      "beginner_friendly_rating": 5,
+      "primary_de": "LXQt",
+      "country_origin": "Spojené království",
+      "details": {
+        "description": "Lubuntu je lehká oficiální varianta Ubuntu používající prostředí LXQt. Je určená hlavně pro počítače s omezeným výkonem nebo pro uživatele, kteří preferují jednoduchý a úsporný systém. Grafické prostředí LXQt je sestavené z lehkých komponent založených na technologii Qt a zachovává klasickou nabídku aplikací a panel. Pro každodenní práci nabízí správce souborů, základní aplikace i přístup k balíčkům Ubuntu. Je vhodné zejména pro starší nebo slabší počítače, ale je potřeba počítat s tím, že náročné webové stránky a moderní aplikace mohou výkon stále výrazně zatěžovat.",
+        "website": "https://lubuntu.me/",
+        "pros": [
+          {
+            "title": "Lehký desktop",
+            "reason": "LXQt má nízké nároky na operační paměť a procesor."
+          },
+          {
+            "title": "Přehledné ovládání",
+            "reason": "Klasický panel a nabídka aplikací usnadňují první orientaci."
+          },
+          {
+            "title": "Základ Ubuntu",
+            "reason": "Uživatel má přístup k velkým softwarovým repozitářům Ubuntu."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Jednodušší výchozí výbava",
+            "reason": "Některé komfortní funkce jiných desktopů chybějí nebo se doplňují."
+          },
+          {
+            "title": "Méně sjednocený vzhled",
+            "reason": "Aplikace z různých grafických toolkitů mohou vypadat odlišně."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový procesor Intel nebo AMD",
+          "ram": "2 GB pro základní použití, 4 GB doporučeno",
+          "gpu": "Běžná integrovaná grafika",
+          "storage": 20
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "LXQt versus LXDE",
+            "description": "Současné Lubuntu používá LXQt, nikoliv starší LXDE."
+          },
+          {
+            "title": "Úsporný prohlížeč",
+            "description": "I na lehkém systému může mnoho otevřených karet rychle zaplnit operační paměť."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Zorin OS Core",
+      "id": "zorin-os-core",
+      "developer": "Zorin Group",
+      "beginner_friendly_rating": 5,
+      "primary_de": "GNOME (upravené prostředí Zorin)",
+      "country_origin": "Irsko",
+      "details": {
+        "description": "Zorin OS je distribuce založená na Ubuntu, navržená zejména pro snadný přechod z Windows. Edice Core nabízí propracované prostředí s možností volby známého rozložení pracovní plochy. Zorin nabízí vlastní úpravy vzhledu a ovládání, takže se začátečník může rychle zorientovat v nabídce aplikací, panelu i práci s okny. Díky základu Ubuntu je dostupná široká knihovna linuxových programů a návodů. Bezplatná edice Core se hodí pro běžné domácí využití, studium a kancelářskou práci, zatímco placená edice Pro přidává další obsah a možnosti rozložení prostředí.",
+        "website": "https://zorin.com/os/",
+        "pros": [
+          {
+            "title": "Přívětivý přechod",
+            "reason": "Rozložení plochy může připomínat známé prostředí Windows."
+          },
+          {
+            "title": "Pěkný výchozí vzhled",
+            "reason": "Vizuální styl je sladěný bez dlouhého nastavování."
+          },
+          {
+            "title": "Ubuntu pod kapotou",
+            "reason": "Mnoho běžných návodů a aplikací pro Ubuntu lze využít také zde."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Některé funkce v placené edici",
+            "reason": "Další rozložení a doplňky se mohou nabízet v edici Pro."
+          },
+          {
+            "title": "Méně rychlé vydávání změn",
+            "reason": "Projekt se soustředí na hotový uživatelský zážitek, ne na okamžité nasazování všech novinek."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový dvoujádrový procesor alespoň 1 GHz",
+          "ram": "2 GB minimum, 4 GB a více pro pohodlí",
+          "gpu": "Grafika zvládající rozlišení alespoň 800 × 600",
+          "storage": 15
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "Edice systému",
+            "description": "Před instalací si ověř rozdíly mezi Core, Education a Pro; jejich požadavky na disk se liší."
+          },
+          {
+            "title": "Kompatibilita aplikací",
+            "description": "Programy určené pro Windows se nespustí vždy automaticky; zvaž linuxovou alternativu."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Pop!_OS",
+      "id": "pop-os",
+      "developer": "System76",
+      "beginner_friendly_rating": 4,
+      "primary_de": "COSMIC",
+      "country_origin": "USA",
+      "details": {
+        "description": "Pop!_OS je distribuce od společnosti System76 zaměřená na produktivitu, vývoj a moderní počítače. Verze 24.04 LTS používá nové prostředí COSMIC s organizací oken a podporou pracovních ploch. Prostředí COSMIC se soustředí na efektivní ovládání klávesnicí, organizaci pracovních ploch a skládání oken vedle sebe. Systém vychází z Ubuntu a používá známý ekosystém linuxových nástrojů a balíčků, ale část grafického prostředí je vyvíjena samostatně společností System76. Oslovit může programátory, pokročilejší uživatele notebooků a každého, kdo chce produktivní způsob práce s více aplikacemi.",
+        "website": "https://system76.com/pop/",
+        "pros": [
+          {
+            "title": "Produktivní práce s okny",
+            "reason": "COSMIC nabízí funkce uspořádání oken a ovládání pomocí klávesnice."
+          },
+          {
+            "title": "Zaměření na hardware",
+            "reason": "Projekt se soustředí na desktopová PC, notebooky a podporu grafických karet."
+          },
+          {
+            "title": "Základ Ubuntu",
+            "reason": "Pro instalaci mnoha programů lze využít balíčky a návody z ekosystému Ubuntu."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Mladší desktop",
+            "reason": "COSMIC se rychle vyvíjí a některé funkce mohou být méně vyzrálé než v zavedených prostředích."
+          },
+          {
+            "title": "Specifické instalační postupy",
+            "reason": "Podle edice a hardwaru je třeba zvolit správný obraz systému; instalátor může vyžadovat změnu Secure Boot."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový procesor Intel nebo AMD",
+          "ram": "4 GB minimum, 8 GB doporučeno",
+          "gpu": "Intel/AMD grafika nebo odpovídající obraz pro NVIDIA",
+          "storage": 20
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "COSMIC není GNOME",
+            "description": "Aktuální Pop!_OS 24.04 LTS již standardně používá prostředí COSMIC."
+          },
+          {
+            "title": "NVIDIA a Secure Boot",
+            "description": "Před instalací zkontroluj doporučený obraz systému a oficiální pokyny k Secure Boot."
+          }
+        ]
+      }
+    },
+    {
+      "name": "elementary OS",
+      "id": "elementary-os",
+      "developer": "elementary, Inc. a komunita",
+      "beginner_friendly_rating": 4,
+      "primary_de": "Pantheon",
+      "country_origin": "USA",
+      "details": {
+        "description": "elementary OS staví na Ubuntu a klade důraz na jednotný vzhled, jednoduchost a pečlivě navržené aplikace. Jeho prostředí Pantheon osloví uživatele, kteří mají rádi střídmý desktop připomínající některé principy macOS. Pantheon používá jednotné prvky prostředí, horní panel a dok s aplikacemi a podporuje jednoduché pracovní postupy bez velkého množství voleb. Vlastní AppCenter zdůrazňuje přehledné získávání aplikací včetně aplikací distribuovaných jako Flatpak. elementary OS se hodí hlavně pro uživatele, kterým záleží na konzistentním designu a jsou spokojeni s předem navrženým způsobem ovládání.",
+        "website": "https://elementary.io/",
+        "pros": [
+          {
+            "title": "Jednotný design",
+            "reason": "Prostředí a vlastní aplikace dodržují podobná vizuální pravidla."
+          },
+          {
+            "title": "Snadné ovládání",
+            "reason": "Systém se snaží omezit zbytečná nastavení a rozptýlení."
+          },
+          {
+            "title": "AppCenter",
+            "reason": "Přehledný obchod usnadňuje hledání aplikací zaměřených na tento systém."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Méně přizpůsobení",
+            "reason": "Pantheon nenabízí tolik možností úprav jako KDE Plasma."
+          },
+          {
+            "title": "Užší nabídka vlastních aplikací",
+            "reason": "Specifických aplikací pro Pantheon je méně než běžných linuxových programů."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový dvoujádrový procesor",
+          "ram": "4 GB pro základní provoz, 8 GB doporučeno",
+          "gpu": "Integrovaná grafika s podporou akcelerace",
+          "storage": 25
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "AppCenter a Flatpak",
+            "description": "Seznam se s instalací aplikací z AppCenter a ověřuj důvěryhodnost jejich zdrojů."
+          },
+          {
+            "title": "Omezené přizpůsobení",
+            "description": "Systém je vhodnější pro uživatele, kterým vyhovuje jeho výchozí způsob ovládání."
+          }
+        ]
+      }
+    },
+    {
+      "name": "openSUSE Tumbleweed",
+      "id": "opensuse-tumbleweed",
+      "developer": "openSUSE Project",
+      "beginner_friendly_rating": 3,
+      "primary_de": "KDE Plasma / GNOME (volitelné)",
+      "country_origin": "Německo",
+      "details": {
+        "description": "openSUSE Tumbleweed je průběžně aktualizovaná distribuce s automatizovaným testováním balíčků. Při instalaci si uživatel vybírá například KDE Plasma, GNOME nebo Xfce; systém je zajímavý pro ty, kteří chtějí aktuální software. Správu balíčků zajišťuje Zypper a komplexnější nastavení systému může usnadnit nástroj YaST. Projekt používá automatizované testování vydávaných aktualizačních sad; na vhodně nastaveném souborovém systému Btrfs lze využívat snímky pro návrat po problematické změně. Tumbleweed ocení lidé, kteří chtějí průběžně aktuální KDE Plasma, GNOME nebo další komponenty a nebojí se pravidelné správy systému.",
+        "website": "https://get.opensuse.org/tumbleweed/",
+        "pros": [
+          {
+            "title": "Rolling release",
+            "reason": "Nové verze programů přicházejí bez nutnosti velkého přeinstalování systému."
+          },
+          {
+            "title": "Testování aktualizací",
+            "reason": "Snímky Tumbleweedu procházejí automatizovanými testy."
+          },
+          {
+            "title": "Možnosti správy systému",
+            "reason": "Nástroje openSUSE a Btrfs snapshoty mohou usnadnit správu a návrat po chybné aktualizaci."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Průběžné změny",
+            "reason": "Časté aktualizace vyžadují více pozornosti než konzervativní LTS systémy."
+          },
+          {
+            "title": "Odlišný ekosystém",
+            "reason": "Správce balíčků Zypper a postupy openSUSE se liší od Ubuntu nebo Fedory."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový procesor Intel nebo AMD",
+          "ram": "4 GB pro základní použití, 8 GB doporučeno",
+          "gpu": "Grafika vhodná pro zvolené prostředí KDE, GNOME nebo Xfce",
+          "storage": 40
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "Zypper",
+            "description": "Základní správu balíčků zajišťuje Zypper; pro aktualizaci Tumbleweedu se používá zypper dup."
+          },
+          {
+            "title": "Snapshoty systému",
+            "description": "Nauč se pracovat s Btrfs a Snapperem, pokud jsou při instalaci nakonfigurované."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Manjaro KDE",
+      "id": "manjaro-kde",
+      "developer": "Manjaro Team",
+      "beginner_friendly_rating": 3,
+      "primary_de": "KDE Plasma",
+      "country_origin": "Německo",
+      "details": {
+        "description": "Manjaro je distribuce odvozená od Arch Linuxu, která nabízí grafický instalátor a předpřipravený desktop. Varianta KDE kombinuje prostředí Plasma s balíčkovacím systémem Pacman a vlastním harmonogramem aktualizací. Balíčky se spravují přes Pacman nebo jeho grafickou nadstavbu Pamac; oproti Arch Linuxu má Manjaro vlastní repozitáře a časování aktualizací. Prostředí KDE Plasma umožňuje detailně přizpůsobit plochu a instalátor usnadňuje první zprovoznění systému. Při práci s komunitním AUR je ale potřeba opatrnost, protože obsah AUR není oficiálně testován přímo pro konkrétní stav balíčků Manjara.",
+        "website": "https://manjaro.org/",
+        "pros": [
+          {
+            "title": "Snadnější start s Archem",
+            "reason": "Uživatel dostane grafický instalátor a připravené prostředí."
+          },
+          {
+            "title": "Přizpůsobitelná Plasma",
+            "reason": "KDE nabízí velké množství nastavení a pohodlné každodenní používání."
+          },
+          {
+            "title": "Široká nabídka balíčků",
+            "reason": "Dostupné jsou repozitáře Manjara a volitelně také komunitní AUR."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Opatrnost s AUR",
+            "reason": "Balíčky z AUR nemusí vždy odpovídat verzím knihoven v repozitářích Manjara."
+          },
+          {
+            "title": "Rolling-release údržba",
+            "reason": "Pravidelné aktualizace mohou občas vyžadovat řešení konfliktů balíčků nebo konfigurace."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový procesor Intel nebo AMD",
+          "ram": "4 GB základ, 8 GB doporučeno",
+          "gpu": "Integrovaná grafika s podporou KDE Plasma",
+          "storage": 30
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "Pacman a Pamac",
+            "description": "Rozlišuj příkazový správce Pacman a grafický nástroj Pamac."
+          },
+          {
+            "title": "AUR není oficiální repozitář",
+            "description": "Před použitím balíčku z AUR si přečti PKGBUILD a diskusi; nespoléhej na automatickou důvěryhodnost."
+          }
+        ]
+      }
+    },
+    {
+      "name": "EndeavourOS",
+      "id": "endeavouros",
+      "developer": "Komunita EndeavourOS",
+      "beginner_friendly_rating": 3,
+      "primary_de": "KDE Plasma (live ISO)",
+      "country_origin": "Mezinárodní projekt",
+      "details": {
+        "description": "EndeavourOS je distribuce postavená na Arch Linuxu, která nabízí jednodušší instalaci a blízkost výchozímu Archu. Instalační live prostředí využívá KDE Plasma, ale při online instalaci lze vybrat také jiné desktopy. Systém ponechává uživateli blízký přístup k nástrojům Arch Linuxu, zejména správci balíčků Pacman a rozsáhlé dokumentaci Arch Wiki. Přestože instalaci usnadňuje grafický instalátor, pozdější správa a řešení problémů mohou vyžadovat práci v terminálu. Je vhodný pro zájemce, kteří chtějí poznat fungování Arch Linuxu, ale uvítají jednodušší počáteční instalaci a dostupnou komunitu.",
+        "website": "https://endeavouros.com/",
+        "pros": [
+          {
+            "title": "Blízko Arch Linuxu",
+            "reason": "Používá balíčky a pracovní postupy Archu s menším množstvím vlastních úprav."
+          },
+          {
+            "title": "Grafický instalátor",
+            "reason": "Instalace je výrazně pohodlnější než ruční sestavování systému."
+          },
+          {
+            "title": "Velká volnost",
+            "reason": "Online instalátor umožňuje zvolit desktop a řadu systémových součástí."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Více práce po instalaci",
+            "reason": "Výchozí systém bývá méně vybavený než uživatelsky orientované distribuce."
+          },
+          {
+            "title": "Očekává samostatnost",
+            "reason": "Při potížích se hodí zkušenosti s terminálem a čtením dokumentace Arch Wiki."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový procesor Intel nebo AMD",
+          "ram": "4 GB pro instalaci, 8 GB doporučeno",
+          "gpu": "Grafika vhodná pro vybraný desktop",
+          "storage": 20
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "Arch Wiki",
+            "description": "Arch Wiki je výborný zdroj informací, ale jednotlivé kroky vždy ověř pro svou konfiguraci."
+          },
+          {
+            "title": "Pravidelné aktualizace",
+            "description": "Před větší aktualizací si přečti upozornění projektu a vyhýbej se částečným aktualizacím balíčků."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Arch Linux",
+      "id": "arch-linux",
+      "developer": "Arch Linux Project a komunita",
+      "beginner_friendly_rating": 1,
+      "primary_de": "Žádné (volí uživatel)",
+      "country_origin": "Kanada",
+      "details": {
+        "description": "Arch Linux je minimalistická rolling-release distribuce, která uživateli dává velkou kontrolu nad sestavením systému. Neinstaluje automaticky kompletní grafické prostředí; KDE, GNOME, Xfce nebo správce oken si uživatel vybere a nastaví sám. Systém využívá správce balíčků Pacman a průběžný model aktualizací, takže se instaluje jednou a poté se postupně udržuje. Uživatel sám rozhoduje o grafickém prostředí, síťových službách, zavaděči a dalších základních součástech; při instalaci může pomoci nástroj archinstall. Arch je výborný pro studium vnitřního fungování Linuxu a pro zkušené uživatele, kteří dávají přednost vlastnímu nastavení před hotovým řešením.",
+        "website": "https://archlinux.org/",
+        "pros": [
+          {
+            "title": "Maximální kontrola",
+            "reason": "Instaluješ jen ty součásti, které skutečně chceš používat."
+          },
+          {
+            "title": "Aktuální balíčky",
+            "reason": "Rolling-release model poskytuje velmi nové verze programů a systémových knihoven."
+          },
+          {
+            "title": "Výborná dokumentace",
+            "reason": "Arch Wiki patří mezi nejpodrobnější zdroje znalostí o Linuxu."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Náročnější instalace",
+            "reason": "Uživatel musí chápat rozdělení disku, zavaděč, síť a správu balíčků, i když může využít archinstall."
+          },
+          {
+            "title": "Vyžaduje údržbu",
+            "reason": "Změny konfigurace a některé aktualizace mohou vyžadovat ruční zásah."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový procesor kompatibilní s x86-64",
+          "ram": "2 GB pro základní systém, 4–8 GB pro běžný desktop",
+          "gpu": "Záleží na zvoleném grafickém prostředí; bez desktopu GPU není zásadní",
+          "storage": 20
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "Základy terminálu",
+            "description": "Před instalací zvládni práci se soubory, uživateli, službami systemd a připojováním disků."
+          },
+          {
+            "title": "Pacman a Arch Wiki",
+            "description": "Aktualizuj systém konzistentně pomocí pacman -Syu a sleduj oficiální Arch News."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Linux Lite",
+      "id": "linux-lite",
+      "developer": "Linux Lite Team",
+      "beginner_friendly_rating": 5,
+      "primary_de": "Xfce",
+      "country_origin": "Nový Zéland",
+      "details": {
+        "description": "Linux Lite je distribuce založená na Ubuntu, která cílí na méně výkonné počítače a nové uživatele Linuxu. Používá prostředí Xfce a nabízí jednoduché nástroje pro základní nastavení systému. Prostředí Xfce poskytuje klasický panel a nabídku aplikací, díky čemuž je ovládání snadno srozumitelné i pro uživatele Windows. Distribuce přidává vlastní nástroje, které mohou zjednodušit instalaci běžného softwaru a prvotní nastavení počítače. Protože stojí na Ubuntu, lze využít systém APT a rozsáhlé množství dostupných aplikací, ale pro starší hardware je stále důležitá také kapacita paměti a rychlost disku.",
+        "website": "https://www.linuxliteos.com/",
+        "pros": [
+          {
+            "title": "Nízké nároky",
+            "reason": "Xfce běží dobře i na starších počítačích s omezenými prostředky."
+          },
+          {
+            "title": "Přehledná plocha",
+            "reason": "Klasická nabídka aplikací a panel usnadňují přechod z Windows."
+          },
+          {
+            "title": "Ubuntu kompatibilita",
+            "reason": "Lze využít velkou část návodů a balíčků pro Ubuntu."
+          }
+        ],
+        "cons": [
+          {
+            "title": "Střídmější vzhled",
+            "reason": "Desktop se zaměřuje více na praktičnost než na moderní animace."
+          },
+          {
+            "title": "Menší komunita",
+            "reason": "Oproti Ubuntu nebo Mintu je k dispozici méně specifických návodů."
+          }
+        ],
+        "our_experience": "",
+        "hardware_requirements": {
+          "cpu": "64bitový procesor alespoň přibližně 1,5 GHz",
+          "ram": "1 GB minimum pro starší vydání, 2–4 GB doporučeno",
+          "gpu": "Běžná integrovaná grafika",
+          "storage": 20
+        },
+        "needed_knowledge_tips": [
+          {
+            "title": "Rozumná očekávání",
+            "description": "Lehký desktop pomůže, ale náročný webový prohlížeč může starý počítač stále zpomalovat."
+          },
+          {
+            "title": "Aktualizace Ubuntu",
+            "description": "Stejně jako u jiných systémů založených na Ubuntu používej oficiální repozitáře a pravidelně aktualizuj."
+          }
+        ]
+      }
+    }
+  ]
 }

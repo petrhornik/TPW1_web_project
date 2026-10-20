@@ -1,7 +1,32 @@
 ---
+
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import distroList from "../../data/distroList.json"
+
 ---
 
 <BaseLayout>
     <h1>Dle preference ušito na míru!</h1>
+    <section class="content-box">
+
+    </section>
+    <section class="item-grid">
+        {distroList.distros.map((distro: any, idx) => {
+            return(
+                <div class="card">
+                    <img src={`/images/distros/${distro.id}/logo.svg`} alt="Logo linuxové distribuce">
+                    <h3>{distro.name}</h3>
+                    <br>
+                    <div>
+                        <p>Jednoduchost: {distro.beginner_friendly_rating}/5</p>
+                        <p>Země: {distro.country_origin}</p>
+                        <p></p>
+                    </div>
+                    <br>
+                    <a href={`/distros/${distro.id}`}>Detail</a>
+                </div>
+            )
+        })}
+    </section>
 </BaseLayout>

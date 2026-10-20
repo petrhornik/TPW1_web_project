@@ -1,0 +1,7 @@
+.item-grid{
+    display: flex;
+    gap: var(--spacing-xxl);
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+}

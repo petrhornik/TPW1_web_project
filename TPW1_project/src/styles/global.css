@@ -28,13 +28,13 @@
     /* barvy */
 
     &[data-theme="light"] {
-        --color-primary: #8D91C7;
-        --color-primary-hover: #6b6e96;
-        --color-secondary: #6E75A8;
-        --color-surface: #3E1929;
-        --color-background: #F9DBBD;
-        --color-component-background: #F0E3D2;
-        --color-text: #1c1c1c;
+        --color-primary: #6b819a;
+        --color-primary-hover: #54667a;
+        --color-secondary: #c1a5aa;
+        --color-surface: #1C1C1C;
+        --color-background: #EEF0F2;
+        --color-component-background: #FAFAFF;
+        --color-text: #1C1C1C;
         --color-text-light: #FFF8F2;
     }
 
@@ -143,6 +143,8 @@ main{
     text-underline-offset: 0.5rem;
 }
 
+/* stylizace komponentu pro box s obsahem */
+
 .content-box{
     display: flex;
     align-items: center;
@@ -178,4 +180,26 @@ main{
 .content-box ol {
     margin-top: var(--spacing-sm);
     padding-left: var(--spacing-lg);
+}
+
+/* styling pro komponentu karty položky */
+
+.card{
+    background-color: var(--color-component-background);
+    padding: var(--spacing-xl);
+    max-width: 15rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img{
+    width: 10rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.card h3{
+    text-align: center;
 }
