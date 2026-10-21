@@ -1,19 +1,32 @@
-{
-    "handbook": {
-        "firstSteps": [
+[
+    {
+        "id": "first-steps",
+        "name": "Začínáme",
+        "description": "Vítejte na palubě! Zde si ukážeme první kroky vaším novým systémem a na co se půžete těšit.",
+        "articles": [
             {
 
             }
-        ],
-        "basicCommands": [
+        ]
+    },
+    {
+        "id": "commands",
+        "name": "Příručka příkazů",
+        "description": "Seda příkazů, které se vám budou či můžou hodit během používání vašeho systému.",
+        "articles": [
             {
-
+                    
             }
-        ],
-        "commonProblems": [
+        ]
+    },
+    {
+        "id": "troubleshooting",
+        "name": "Techničák",
+        "description": "Ať chceme ne bo ne, všechno má své chyby. Zde se vám pokusíme pomoci s jejich opravami.",
+        "articles": [
             {
-                
+                    
             }
         ]
     }
-}
+]

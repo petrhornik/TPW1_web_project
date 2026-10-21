@@ -1,0 +1,11 @@
+.image-gallery{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    gap: var(--spacing-xl);
+}
+
+.image-gallery img{
+    width: 80%;
+    border-radius: 1rem;
+}

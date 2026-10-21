@@ -2,6 +2,7 @@
 
 import BaseLayout from "../../layouts/BaseLayout.astro"
 import distroList from "../../data/distroList.json"
+import ImageGallery from "../../components/ImageGallery.astro"
 
 // zprovoznění routů pro linking a jednoduchost :DD
 export const getStaticPaths = (() => {
@@ -14,19 +15,35 @@ const {detail} = Astro.params;
 
 // můj solution pro vyfiltrování konkrétní položky z arraye pro výpis do detail okna
 const distroDetail = distroList.distros.filter(distro => {
-    return distro.name === detail;
+    return distro.id === detail;
 })[0];
 
 ---
 
 <BaseLayout>
-    <h1>{detail}</h1>
-    <section class="page-content">
+    <h2>Detail linuxové distribuce_</h2>
+    <section class="page-content page-content-direction-row">
         <section class="content-box">
-            
+            <article class="content-box-texts">
+                <div class="content-box-headline">
+                    <img src={`/images/distros/${distroDetail.id}/logo.svg`} alt="">
+                    <h1>{distroDetail.name}</h1>
+                </div>
+                <div class="content-box-main">
+                    <p><strong>Vývojář:</strong> {distroDetail.developer}</p>
+                    <p><strong>Původ:</strong> {distroDetail.country_origin}</p>
+                    <p><strong>Grafické prostředí:</strong> {distroDetail.primary_de}</p>
+                    <hr>
+                    <h4>Popis:</h4>
+                    <p>{distroDetail.details.description}</p>
+                    <hr>
+                    <a href={distroDetail.details.website} class="btn">Odkaz na web</a>
+                </div>
+            </article>
+            <img src={`/images/distros/${distroDetail.id}/desktop_img_dir/1.png`} alt="" class="content-box-img-lg">
         </section>
-        <aside class="img-gallery">
+        <section>
 
-        </aside>
+        </section>
     </section>
 </BaseLayout>

@@ -1,0 +1,14 @@
+---
+ const {imageSrc, title, srcLink} = Astro.props;
+---
+
+<div class="card">
+    <img src={imageSrc} alt="Logo linuxové distribuce">
+    <h3>{title}</h3>
+    <br>
+    <div>
+        <slot name="texts" />
+    </div>
+    <br>
+    {srcLink && <a href={srcLink} class="btn">Detail</a>} <!-- když nebudu mít odkazovací link tak nebude anchor :D -->
+</div>

@@ -1,19 +1,27 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import linuxHandbookData from "../../data/linuxHandbook.json"
+import Card from "../../components/card.astro";
 
 ---
 
 <BaseLayout>
     <h1>Handbook hl. strana</h1>
-    <section class="page-content">
-        <aside>
-            <ul>
-                {JSON.stringify(linuxHandbookData)}
-            </ul>
-        </aside>
-        <section class="content-box">
-
-        </section>
+    <section class="page-content handbook">
+        {
+            linuxHandbookData.map((item: any) => {
+                return(
+                    <Card
+                        imageSrc={`/siteContent/handbook/${item.id}_group_logo.svg`}
+                        title={item.name}
+                        srcLink={`/handbook/${item.id}`}
+                    >
+                        <Fragment slot="texts">
+                            <p>{item.description}</p>
+                        </Fragment>
+                    </Card>
+                )
+            })
+        }
     </section>
 </BaseLayout>

@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import handbookData from "../../data/linuxHandbook.json"
+
+
+export const getStaticPaths = (() => {
+    return new Array(...handbookData.map(item => {
+        return {params: {group: item.id}}
+    }))
+})
+
+const {group} = Astro.params;
+
+---
+
+<BaseLayout>
+    <h1>{group}</h1>
+</BaseLayout>

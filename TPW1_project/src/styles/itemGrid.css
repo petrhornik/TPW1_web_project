@@ -2,6 +2,7 @@
     display: flex;
     gap: var(--spacing-xxl);
     flex-wrap: wrap;
-
     justify-content: space-evenly;
+
+    margin: var(--spacing-xl) 0;
 }

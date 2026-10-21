@@ -97,6 +97,10 @@ main{
     font-size: 5rem;
 }
 
+.hero-content h2{
+    font-size: 1.5rem;
+}
+
 .hero-content img {
     width: 25rem;
 }
@@ -132,8 +136,15 @@ main{
 
 .page-content{
     display: flex;
-    flex-direction: column;
     scroll-margin-top: calc(var(--navbar-height) + 1rem);
+}
+
+.page-content-direction-row{
+    flex-direction: row;
+}
+
+.page-content-direction-column{
+        flex-direction: column;
 }
 
 
@@ -161,6 +172,11 @@ main{
     width: 25%;
 }
 
+.content-box-img-lg{
+    width: 50% !important;
+    border-radius: 0.5rem;
+}
+
 .content-box-texts{
     width: 50%;
 }
@@ -174,7 +190,11 @@ main{
 }
 
 .content-box-main{
-    margin-top: 1rem;
+    margin-top: var(--spacing-md);
+}
+
+.content-box hr{
+    margin: var(--spacing-md);
 }
 
 .content-box ol {
@@ -192,6 +212,7 @@ main{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -202,4 +223,14 @@ main{
 
 .card h3{
     text-align: center;
+}
+
+/* stylizace tlačítka */
+
+.btn{
+    background-color: var(--color-secondary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: var(--color-text-light);
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
