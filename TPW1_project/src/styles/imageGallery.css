@@ -1,11 +1,12 @@
 .image-gallery{
     display: flex;
-    flex-direction: column;
-    max-width: 50%;
+    max-width: auto;
     gap: var(--spacing-xl);
+    overflow-x: scroll;
+    border-radius: 1rem;
 }
 
-.image-gallery img{
-    width: 80%;
+.image-gallery__img{
+    width: 60%;
     border-radius: 1rem;
 }

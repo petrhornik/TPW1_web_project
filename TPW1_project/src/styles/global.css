@@ -21,6 +21,8 @@
 
     /* velikosti textu */
 
+
+
     /* další data pro správnou funkcionalitu css */
 
     --navbar-height: 4.5rem;
@@ -36,6 +38,9 @@
         --color-component-background: #FAFAFF;
         --color-text: #1C1C1C;
         --color-text-light: #FFF8F2;
+        --color-danger: #dc3545;
+        --color-success: #28a745;
+        --color-warning: #ffc107;
     }
 
     &[data-theme="dark"] {
@@ -67,6 +72,11 @@ nav > ul{
     list-style: none;
 }
 
+details{
+    cursor: pointer;
+    margin-left: var(--spacing-xl);
+}
+
 /* PC LAYOUT KONFIGURACE */
 
 main{
@@ -85,7 +95,7 @@ main{
     gap: var(--spacing-md);
 }
 
-.hero-content{
+.hero__content{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -93,19 +103,19 @@ main{
     gap: var(--spacing-xxl);
 }
 
-.hero-content h1{
+.hero__content h1{
     font-size: 5rem;
 }
 
-.hero-content h2{
+.hero__content h2{
     font-size: 1.5rem;
 }
 
-.hero-content img {
+.hero__content img {
     width: 25rem;
 }
 
-.hero-button{
+.hero__button{
     display: inline-block;
     margin-top: 1rem;
     color: var(--color-text-light);
@@ -117,41 +127,41 @@ main{
     transition: 0.3s;
 }
 
-.hero-button:hover{
+.hero__button:hover{
     transform: scale(0.95);
     background-color: var(--color-primary-hover);
 }
 
-.hero-direction-pointer{
+.hero__direction-pointer{
     width: 10rem;
     margin-top: 5rem;
     text-align: center;
 }
 
-.hero-direction-pointer img{
+.hero__direction-pointer img{
     width: 75%;
 }
 
-/* styling main contentu hl. index page */
+/* hl styling rozložení stránky */
 
 .page-content{
     display: flex;
+    flex-direction: column;
     scroll-margin-top: calc(var(--navbar-height) + 1rem);
 }
 
-.page-content-direction-row{
-    flex-direction: row;
-}
-
-.page-content-direction-column{
-        flex-direction: column;
-}
-
-
-.site-introduction h2{
+.page-introduction h2{
     font-size: 3rem;
     text-decoration: 2px solid var(--color-secondary) underline;
     text-underline-offset: 0.5rem;
+}
+
+.page-introduction--centered{
+    margin: 0 auto;
+}
+
+.page-content-main{
+    display: flex;
 }
 
 /* stylizace komponentu pro box s obsahem */
@@ -168,28 +178,27 @@ main{
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
-.content-box img{
+.content-box__img{
     width: 25%;
 }
 
-.content-box-img-lg{
-    width: 50% !important;
-    border-radius: 0.5rem;
-}
-
-.content-box-texts{
+.content-box__texts{
     width: 50%;
 }
 
-.content-box-headline{
+.content-box__headline{
     margin-bottom: var(--spacing-md);
 }
 
-.content-box-headline h3{
+.content-box__headline h3{
     font-size: 1.8rem;
 }
 
-.content-box-main{
+.content-box__headline svg{
+    width: 1.8rem;
+}
+
+.content-box__main{
     margin-top: var(--spacing-md);
 }
 
@@ -200,6 +209,30 @@ main{
 .content-box ol {
     margin-top: var(--spacing-sm);
     padding-left: var(--spacing-lg);
+}
+
+/* moje upravy pro prvky content-box  */
+
+.content-box__img--lg{
+    width: 50% !important;
+    border-radius: 0.5rem;
+}
+
+
+.content-box--success{
+    background-color: rgb(from var(--color-success) r g b / 0.7);
+    color: var(--color-text-light);
+}
+
+.content-box--warning{
+    background-color: rgb(from var(--color-warning) r g b / 0.7);
+    color: var(--color-text);
+    
+}
+
+.content-box--danger{
+    background-color: rgb(from var(--color-danger) r g b / 0.7);
+    color: var(--color-text-light);
 }
 
 /* styling pro komponentu karty položky */
@@ -216,12 +249,12 @@ main{
     align-items: center;
 }
 
-.card img{
+.card__img{
     width: 10rem;
     margin-bottom: var(--spacing-md);
 }
 
-.card h3{
+.card__headline{
     text-align: center;
 }
 
@@ -234,3 +267,8 @@ main{
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
+
+.btn--sm{
+
+}
+

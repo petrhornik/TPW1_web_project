@@ -6,9 +6,7 @@ header {
     position: sticky;
     top: 0;
     margin-bottom: var(--spacing-md);
-
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     color: var(--color-text-light);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -17,6 +15,11 @@ header {
 .website-name{
     display: flex;
     justify-self: flex-start;
+    align-items: center;
+}
+
+.website-name > img{
+    width: 3rem;
 }
 
 .menu-list{
@@ -33,7 +36,6 @@ header {
 
 .menu-list li:hover{
     transform: translateY(-0.2rem);
-    text-decoration: 2px underline var(--color-primary);
     text-underline-offset: var(--spacing-xs);
 }
 
@@ -44,4 +46,35 @@ header {
 .lang-selector{
     display: flex;
     justify-self: flex-end;
+}
+
+/* konfigurace pro různé velikosti displaye */
+
+@media screen and (min-width: 768px) {
+    header{
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    .menu-list li:hover{
+        text-decoration: 2px underline var(--color-primary);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .website-name{
+        justify-self: center;
+    }
+    
+    .menu-list{
+        margin-top: var(--spacing-md);
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu-list li{
+        border: 2px solid var(--color-text-light);
+    }
+
+    .menu-list li:hover{
+        border-color: var(--color-primary);
+    }
 }

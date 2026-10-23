@@ -6,22 +6,26 @@ import Card from "../../components/card.astro";
 ---
 
 <BaseLayout>
-    <h1>Handbook hl. strana</h1>
-    <section class="page-content handbook">
-        {
-            linuxHandbookData.map((item: any) => {
-                return(
-                    <Card
-                        imageSrc={`/siteContent/handbook/${item.id}_group_logo.svg`}
-                        title={item.name}
-                        srcLink={`/handbook/${item.id}`}
-                    >
-                        <Fragment slot="texts">
-                            <p>{item.description}</p>
-                        </Fragment>
-                    </Card>
-                )
-            })
-        }
-    </section>
+    <main class="page-content">
+        <section class="page-introduction">
+            <h2>Handbook hl. strana</h2>
+        </section>
+        <section class="item-grid">
+            {
+                linuxHandbookData.map((item: any) => {
+                    return(
+                        <Card
+                            imageSrc={`/siteContent/handbook/${item.id}_group_logo.svg`}
+                            title={item.name}
+                            srcLink={`/handbook/${item.id}`}
+                        >
+                            <Fragment slot="texts">
+                                <p>{item.description}</p>
+                            </Fragment>
+                        </Card>
+                    )
+                })
+            }
+        </section>
+    </main>
 </BaseLayout>

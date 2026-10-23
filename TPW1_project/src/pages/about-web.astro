@@ -3,7 +3,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-    <h1>Info stránka</h1>
-    <dt>Použité prostředky</dt>
-    <dd>Některé ikony použité v projektu pochází z <a href="https://icons8.com/">icons8</a></dd>
+    <main class="page-content">
+        <section class="page-introduction">
+            <h2>Info stránka</h2>
+            <p>Něco málo o tomto webu co by vás možná mohlo zajímat.</p>
+        </section>
+        <section>
+            <article>
+                <h3>FAQ</h3>
+                <dl>
+                    <dt>Proč web vůbec vzdnikl?</dt>
+                    <dd>Tento web vznikl v rámci předmětu TPW1 na Univerzitě Hradec Králové jako semstrální projekt.</dd>
+                    <dt>Proč jsem si vůbec vybral toto téma?</dt>
+                    <dd>Mám rád linux a v ČR mi chybí nějaká věc co by právě tento altenativní OS rozšíříla mezi šírší veřejnost běžných uživatelů.</dd>
+                    <dt></dt>
+                </dl>
+            </article>
+            <article class="content-box content-box--warning">
+                <div content-box-texts>
+                    <div class="content-box-headline">
+                        <h3>DISCLAMER!</h3>
+                    </div>
+                    <div class="content-box-main">
+                        <p>Pro urychlení je některý obsah JSON souborů generovaný pomocí AI</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <dt>Použité prostředky</dt>
+        <dd>Některé ikony použité v projektu pochází z <a href="https://icons8.com/">icons8</a></dd>
+    </main>
 </BaseLayout>

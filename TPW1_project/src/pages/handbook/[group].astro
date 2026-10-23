@@ -11,8 +11,25 @@ export const getStaticPaths = (() => {
 
 const {group} = Astro.params;
 
+const groupData = handbookData.find(item => {
+    return item.id === group && item;
+})
+
+
 ---
 
 <BaseLayout>
-    <h1>{group}</h1>
+    <section class="page-content">
+        <section class="page-introduction">
+            <h2>{groupData.name ? groupData.name : "Stránka nenalezena"}</h2>
+        </section>
+        <section class="page-content-main page-content-main--row">
+            <aside class="">
+
+            </aside>
+            <section class="content-box">
+
+            </section>
+        </section>
+    </section>
 </BaseLayout>

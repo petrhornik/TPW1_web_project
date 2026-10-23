@@ -1,0 +1,18 @@
+---
+
+const {imagesLink} = Astro.props;
+const imageLinks = [];
+
+for (let i = 1; i < 4; i++) {
+    imageLinks.push(`${imagesLink}/${i}.png`)
+}
+
+---
+
+<section class="image-gallery">
+    {
+        imageLinks.map(link =>{
+            return <img src={link} alt="" class="image-gallery__img">
+        })
+    }
+</section>
