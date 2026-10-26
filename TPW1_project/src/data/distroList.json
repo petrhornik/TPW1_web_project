@@ -34,7 +34,7 @@
             "reason": "Kdo chce nejnovější technologie ihned po vydání, může dát přednost rolling-release distribuci."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Linux Mint na nás působil velmi přívětivě a díky prostředí Cinnamon se v něm snadno zorientuje i začátečník. Klasické rozložení plochy s nabídkou aplikací, panelem a přehledným nastavením připomíná známé systémy, takže přechod na Linux není zbytečně složitý. Oceňujeme také grafický Správce softwaru, jednoduchou instalaci ovladačů a nástroj Timeshift, který může pomoci s návratem k funkčnímu stavu systému.",
         "hardware_requirements": {
           "cpu": "64bitový procesor Intel nebo AMD",
           "ram": "2 GB minimum, 4 GB a více doporučeno",
@@ -87,7 +87,7 @@
             "reason": "Na starších počítačích může být plynulejší lehčí varianta Ubuntu."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Ubuntu nabízí pohodlný start, širokou podporu hardwaru a množství návodů, takže se dobře hodí pro každodenní používání. Prostředí GNOME působí čistě a moderně, zatímco velká komunita usnadňuje hledání řešení při potížích. Za praktické považujeme také pravidelná vydání, dlouhodobě podporované verze LTS a dostupnost velkého množství aplikací v repozitářích i přes Snap.",
         "hardware_requirements": {
           "cpu": "64bitový dvoujádrový procesor přibližně 2 GHz nebo lepší",
           "ram": "6 GB doporučeno pro Ubuntu Desktop 26.04/26.10",
@@ -140,7 +140,7 @@
             "reason": "Pro část multimediálního softwaru může být nutné povolit další repozitáře."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Fedora Workstation na nás udělala dojem moderním GNOME prostředím a aktuálními technologiemi, především Waylandem. Systém působí svižně a čistě, přináší nové verze programů i vývojářských nástrojů a dobře se hodí pro programování nebo práci s kontejnery. Je však potřeba počítat s častějšími upgrady a s tím, že některé kodeky či ovladače mohou vyžadovat instalaci z doplňkových repozitářů.",
         "hardware_requirements": {
           "cpu": "Moderní 64bitový procesor Intel nebo AMD",
           "ram": "4 GB minimum pro základní použití, 8 GB pohodlnější",
@@ -193,7 +193,7 @@
             "reason": "Je třeba počítat s přechodem na novou verzi přibližně jednou za několik měsíců až rok."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Fedora KDE spojuje aktuální základ Fedory s velmi přizpůsobitelnou plochou KDE Plasma. Prostředí nabízí mnoho možností pro úpravu panelů, vzhledu i pracovních ploch, ale zároveň těží z moderního linuxového jádra a čerstvých balíčků Fedory. Výsledkem je dobrá volba pro uživatele, kteří chtějí komfortní desktop s možností detailního nastavení a nevadí jim pravidelně sledovat aktualizace systému.",
         "hardware_requirements": {
           "cpu": "Moderní 64bitový procesor Intel nebo AMD",
           "ram": "4 GB minimum pro základní použití, 8 GB doporučeno",
@@ -246,7 +246,7 @@
             "reason": "Některé ovladače, balíčky nebo vzhled systému si uživatel dolaďuje sám."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Debian působí stabilně a předvídatelně; ocenili jsme jeho spolehlivost při dlouhodobém používání. Instalace umožňuje vybrat si z několika desktopových prostředí nebo vytvořit úsporný systém bez grafické plochy, což rozšiřuje jeho využití od běžného počítače až po server. Balíčky ve stabilní větvi nemusí být nejnovější, ale právě důkladné testování a konzervativní přístup jsou výhodou tam, kde je důležitější klidný provoz než nejnovější funkce.",
         "hardware_requirements": {
           "cpu": "64bitový procesor Intel nebo AMD; podporovány jsou i další architektury",
           "ram": "2 GB pro lehčí desktop, 4 GB a více pro GNOME",
@@ -299,7 +299,7 @@
             "reason": "Plasma obvykle potřebuje více prostředků než LXQt nebo Xfce."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Kubuntu nabízí známé Ubuntu zázemí spolu s pohodlným a dobře nastavitelným prostředím KDE Plasma. Plocha působí tradičně, nabízí nabídku aplikací, panel i správu oken podobnou jiným desktopovým systémům a lze ji přizpůsobit různým pracovním návykům. Díky Ubuntu jsou snadno dostupné ovladače, návody i aplikace, zatímco KDE poskytuje více možností nastavení než výchozí prostředí běžného Ubuntu.",
         "hardware_requirements": {
           "cpu": "64bitový dvoujádrový procesor",
           "ram": "4 GB pro základní práci, 8 GB pohodlnější",
@@ -352,7 +352,7 @@
             "reason": "Některé pokročilé funkce je potřeba doinstalovat nebo nastavit ručně."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Xubuntu na nás zapůsobilo nízkými nároky a svižným prostředím Xfce, které se hodí i pro starší počítače. Ovládání je jednoduché, panely a nabídky jsou přehledné a systém nepoužívá tolik grafických efektů jako náročnější desktopy. Díky ubuntu základům zůstává dostupná široká nabídka aplikací i návodů, takže Xubuntu představuje praktickou volbu pro notebooky nebo počítače, kde je důležitější rychlá odezva než moderní vzhled.",
         "hardware_requirements": {
           "cpu": "64bitový dvoujádrový procesor",
           "ram": "2 GB pro jednoduché použití, 4 GB doporučeno",
@@ -405,7 +405,7 @@
             "reason": "Aplikace z různých grafických toolkitů mohou vypadat odlišně."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Lubuntu je velmi úsporné a díky LXQt dokáže oživit i hardware, na kterém jsou náročnější desktopy pomalé. Prostředí se spouští rychle, spotřebovává méně paměti a přitom nabízí základní funkce pro běžnou práci, prohlížení webu i správu souborů. Výchozí vzhled je jednodušší a některá nastavení nejsou tak integrovaná jako v GNOME nebo KDE, ale právě nízké nároky a kompatibilita s balíčky Ubuntu jsou jeho hlavní předností.",
         "hardware_requirements": {
           "cpu": "64bitový procesor Intel nebo AMD",
           "ram": "2 GB pro základní použití, 4 GB doporučeno",
@@ -458,7 +458,7 @@
             "reason": "Projekt se soustředí na hotový uživatelský zážitek, ne na okamžité nasazování všech novinek."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Zorin OS Core nabízí uhlazené prostředí a rozložení známé uživatelům Windows, takže přechod na Linux je příjemný. Výchozí vzhled je dobře sladěný a uživatel nemusí hned po instalaci trávit čas rozsáhlým nastavováním panelů nebo motivů. Základ Ubuntu zajišťuje přístup k široké nabídce aplikací a návodů, zatímco vlastní úpravy Zorinu pomáhají začátečníkům rychle pochopit práci s nabídkou, okny a soubory.",
         "hardware_requirements": {
           "cpu": "64bitový dvoujádrový procesor alespoň 1 GHz",
           "ram": "2 GB minimum, 4 GB a více pro pohodlí",
@@ -511,7 +511,7 @@
             "reason": "Podle edice a hardwaru je třeba zvolit správný obraz systému; instalátor může vyžadovat změnu Secure Boot."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Pop!_OS je zaměřený na produktivitu; ocenili jsme práci s okny a dobrou podporu hardwaru pro vývoj i tvorbu. Prostředí COSMIC podporuje organizaci pracovních ploch, automatické uspořádání oken a ovládání pomocí klávesnice, takže se hodí při práci s více aplikacemi najednou. Systém vychází z Ubuntu a nabízí jeho známé balíčky, zároveň ale přináší vlastní přístup k desktopu a podporu pro různé grafické karty, včetně samostatného obrazu pro NVIDIA.",
         "hardware_requirements": {
           "cpu": "64bitový procesor Intel nebo AMD",
           "ram": "4 GB minimum, 8 GB doporučeno",
@@ -564,7 +564,7 @@
             "reason": "Specifických aplikací pro Pantheon je méně než běžných linuxových programů."
           }
         ],
-        "our_experience": "",
+        "our_experience": "elementary OS působí jednotně a čistě, přičemž jeho vlastní aplikace a AppCenter podporují jednoduchý způsob práce. Prostředí Pantheon se snaží držet konzistentního vzhledu a omezuje množství voleb, které by mohly uživatele zbytečně rozptylovat. To je příjemné pro každého, komu vyhovuje hotové a promyšlené prostředí, ale lidé hledající rozsáhlé možnosti úprav mohou narazit na jeho limity. Základ Ubuntu a podpora Flatpaku přesto poskytují přístup k mnoha běžným aplikacím.",
         "hardware_requirements": {
           "cpu": "64bitový dvoujádrový procesor",
           "ram": "4 GB pro základní provoz, 8 GB doporučeno",
@@ -617,7 +617,7 @@
             "reason": "Správce balíčků Zypper a postupy openSUSE se liší od Ubuntu nebo Fedory."
           }
         ],
-        "our_experience": "",
+        "our_experience": "openSUSE Tumbleweed přináší čerstvé balíčky v rolling-release modelu a užitečné snapshoty pro bezpečnější správu systému. Aktualizace procházejí automatizovaným testováním a díky nástrojům Zypper, YaST a Snapper nabízí distribuce dobré možnosti správy. Při správném nastavení Btrfs lze v případě problémů využít návrat k předchozímu snapshotu, přesto je potřeba počítat s pravidelnou údržbou a naučit se postupy, které se liší od Ubuntu nebo Fedory.",
         "hardware_requirements": {
           "cpu": "64bitový procesor Intel nebo AMD",
           "ram": "4 GB pro základní použití, 8 GB doporučeno",
@@ -670,7 +670,7 @@
             "reason": "Pravidelné aktualizace mohou občas vyžadovat řešení konfliktů balíčků nebo konfigurace."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Manjaro KDE usnadňuje vstup do světa Archu a zároveň nabízí velmi pohodlně nastavitelnou plochu Plasma. Grafický instalátor a předpřipravené prostředí zpříjemňují první kroky, zatímco Pacman, Pamac a dostupné repozitáře poskytují široké možnosti instalace softwaru. KDE Plasma se dá upravit téměř podle libosti, ale rolling-release charakter vyžaduje pravidelné aktualizace a při používání AUR je vhodné kontrolovat, zda jsou balíčky kompatibilní s aktuálním stavem Manjara.",
         "hardware_requirements": {
           "cpu": "64bitový procesor Intel nebo AMD",
           "ram": "4 GB základ, 8 GB doporučeno",
@@ -723,7 +723,7 @@
             "reason": "Při potížích se hodí zkušenosti s terminálem a čtením dokumentace Arch Wiki."
           }
         ],
-        "our_experience": "",
+        "our_experience": "EndeavourOS poskytuje archový základ s grafickým instalátorem, ale stále nechává uživateli velkou část systému pod kontrolou. Instalace je přístupnější než u čistého Arch Linuxu a při online variantě si lze vybrat desktop podle vlastních potřeb. Po instalaci však zůstává důležitá práce s terminálem, Pacmanem a dokumentací Arch Wiki, takže distribuce dobře vyhovuje uživatelům, kteří se chtějí učit, jak Linux funguje, a nevadí jim samostatně řešit aktualizace nebo případné problémy.",
         "hardware_requirements": {
           "cpu": "64bitový procesor Intel nebo AMD",
           "ram": "4 GB pro instalaci, 8 GB doporučeno",
@@ -776,7 +776,7 @@
             "reason": "Změny konfigurace a některé aktualizace mohou vyžadovat ruční zásah."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Arch Linux nabízí maximální kontrolu nad systémem; nejvíce jsme ocenili aktuální balíčky a výbornou Arch Wiki. Uživatel si může sestavit velmi úsporné prostředí přesně podle svých potřeb a rozhodovat o každé důležité součásti systému. Tato volnost ale znamená více práce při instalaci, konfiguraci i údržbě a vyžaduje ochotu číst dokumentaci a používat terminál. Arch proto není nejjednodušší začátečnická distribuce, ale pro zájemce o hlubší pochopení Linuxu může být velmi přínosný.",
         "hardware_requirements": {
           "cpu": "64bitový procesor kompatibilní s x86-64",
           "ram": "2 GB pro základní systém, 4–8 GB pro běžný desktop",
@@ -829,7 +829,7 @@
             "reason": "Oproti Ubuntu nebo Mintu je k dispozici méně specifických návodů."
           }
         ],
-        "our_experience": "",
+        "our_experience": "Linux Lite je jednoduchý a nenáročný systém, který může být dobrou volbou pro starší počítač nebo začátečníka. Lehké prostředí Xfce nabízí přehlednou plochu, základní nabídku aplikací a svižnou odezvu i na méně výkonném hardwaru. Díky ubuntu základům je možné využívat běžné balíčky a návody, přičemž výchozí nastavení se snaží uživatele zbytečně nezahltit. Hodí se proto pro kancelářskou práci, web nebo jako první krok při návratu staršího počítače do provozu.",
         "hardware_requirements": {
           "cpu": "64bitový procesor alespoň přibližně 1,5 GHz",
           "ram": "1 GB minimum pro starší vydání, 2–4 GB doporučeno",

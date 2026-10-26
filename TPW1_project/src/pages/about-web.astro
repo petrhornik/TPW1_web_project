@@ -8,29 +8,48 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <h2>Info stránka</h2>
             <p>Něco málo o tomto webu co by vás možná mohlo zajímat.</p>
         </section>
-        <section>
-            <article>
-                <h3>FAQ</h3>
-                <dl>
-                    <dt>Proč web vůbec vzdnikl?</dt>
-                    <dd>Tento web vznikl v rámci předmětu TPW1 na Univerzitě Hradec Králové jako semstrální projekt.</dd>
-                    <dt>Proč jsem si vůbec vybral toto téma?</dt>
-                    <dd>Mám rád linux a v ČR mi chybí nějaká věc co by právě tento altenativní OS rozšíříla mezi šírší veřejnost běžných uživatelů.</dd>
-                    <dt></dt>
-                </dl>
-            </article>
-            <article class="content-box content-box--warning">
+        <article class="content-box content-box--warning">
                 <div content-box-texts>
                     <div class="content-box-headline">
                         <h3>DISCLAMER!</h3>
                     </div>
                     <div class="content-box-main">
                         <p>Pro urychlení je některý obsah JSON souborů generovaný pomocí AI</p>
+                        <p>Jedná se o semestrální projekt pro splňění předmětu TPW1 na Univerzitě Hradec Králové. &copy; Petr Horník 2026</p>
                     </div>
                 </div>
-            </article>
+        </article>
+        <article class="content-box">
+            <img src="/siteContent/aboutPage_general.png" alt="" class="content-box__img">
+            <div class="content-box__texts">
+                <div class="content-box__headline">
+                    <h2>Zakladní informace</h2>
+                </div>
+                <hr>
+                <div class="content-box__main">
+                    <h4>Téma webovky:</h4>
+                    <p>Tento web je určen pro začínající uživatele linuxu, kteří se chtějí dozvědět něco o tomto alternativním operačním systému. Web je rozdělen do několika sekcí, které se věnují různým tématům a oblastem linuxu.</p>
+                    <h4>Kdo jsem:</h4>
+                    <p>Jmenuji se Petr Horník a studuji obor ai3s-p na UHK. Baví mě dělat nesmysly s *nix systémy (primárně Linux a MacOS) a následně sledování Anime.</p>
+                </div>
+            </div>
+        </article>
+            <h2>FAQ</h2>
+            <p>FAQ komponenta soon</p>
+            <h2>Mátek nám dotaz? Kontaktujte nás pomocí formu níže:</h2>
+            <p>Form komponenta soon</p>  
+        <section class="content-box">
+            <div class="content_box__texts">
+                <div class="content-box__heading">
+                    <h2>Využité zdroje</h2>
+                </div>
+                <div class="content-box__main">
+                    <p><a href="https://icons8.com/">icons8</a> - určité ikony použité při tvorbě obrázků na index</p>
+                    <p><a href="https://www.svgrepo.com/">SVGRepo</a> - ikony využívané napříč aplikací a v obrázcích na hl. stránce</p>
+                    <p><a href="https://github.com/copilot">Github Copilot</a> - pro sepsání dat do JSON souborů pro vyobrazení</p>
+                </div>
+            </div>
         </section>
-        <dt>Použité prostředky</dt>
-        <dd>Některé ikony použité v projektu pochází z <a href="https://icons8.com/">icons8</a></dd>
+        
     </main>
 </BaseLayout>

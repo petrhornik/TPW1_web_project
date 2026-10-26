@@ -22,28 +22,38 @@ header {
     width: 3rem;
 }
 
-.menu-list{
+.navigation-menu__toggle{
+    display: none;
+    background-color: var(--color-surface);
+    padding: 0 var(--spacing-md);
+    color: var(--color-text-light);
+    font-size: 2rem;
+    border: 2px solid var(--color-text-light);
+    border-radius: 1rem;
+}
+
+.navigation-menu__list{
     display: flex;
     gap: var(--spacing-md);
     justify-self: center;
 }
 
-.menu-list li{
+.navigation-menu__list li{
     cursor: pointer;
     transition: 0.2s;
     padding: 0.5rem;
 }
 
-.menu-list li:hover{
+.navigation-menu__list li:hover{
     transform: translateY(-0.2rem);
     text-underline-offset: var(--spacing-xs);
 }
 
-.menu-list li a{
+.navigation-menu__list li a{
     color: var(--color-text-light);
 }
 
-.lang-selector{
+.navigation-menu__theme-selector{
     display: flex;
     justify-self: flex-end;
 }
@@ -62,19 +72,54 @@ header {
 
 @media screen and (max-width: 768px) {
     .website-name{
-        justify-self: center;
+        justify-self: flex-start;
+        width: 100%;
+    }
+
+    .navigation-menu{
+        display: grid;
+        height: 0px;
+        grid-template-rows: 0fr;
+        opacity: 0;
+        overflow: hidden;
+        transition: grid-template-rows 0.3s ease, opacity 0.2s ease;
     }
     
-    .menu-list{
+    .navigation-menu__toggle{
+        display: flex;
+        margin-left: auto;
+    }
+
+    .navigation-menu__list{
+        min-height: 0;
+        width: 60%;
         margin-top: var(--spacing-md);
         flex-direction: column;
         text-align: center;
     }
-    .menu-list li{
+
+    .navigation-menu__list li{
         border: 2px solid var(--color-text-light);
     }
 
-    .menu-list li:hover{
+    .navigation-menu__list li:hover{
         border-color: var(--color-primary);
     }
+
+    .navigation-menu__theme-selector{
+        display: none;
+    }
+
+    :has(.navigation-menu__toggle[aria-expanded="true"]) .navigation-menu {
+        grid-template-rows: 1fr;
+        opacity: 1;
+        height: auto;
+    }
+
+    :has(.navigation-menu__toggle[aria-expanded="true"]) .navigation-menu__theme-selector {
+        display: flex;
+        justify-self: center;
+        margin-top: var(--spacing-sm);
+    }
+
 }

@@ -6,16 +6,23 @@
     <div class="website-name">
         <img src="/siteContent/website_logo.svg" alt="">
         <h1>Linux v pohodě</h1>
+        <button class="navigation-menu__toggle" aria-expanded="false" aria-controls="navigation-menu">
+            =
+        </button>
     </div>
-    <nav class="navigation-menu" aria-extended="true">
-        <ul class="menu-list">
+    <nav class="navigation-menu" id="navigation-menu">
+        <ul class="navigation-menu__list">
             <li><a href="/">Domov</a></li>
             <li><a href="/distros">List distribucí</a></li>
             <li><a href="/handbook">Příručka</a></li>
             <li><a href="/about-web">O webu</a></li>
         </ul>
     </nav>
-    <div class="lang-selector">
-        <p>CZ</p>
+    <div class="navigation-menu__theme-selector">
+        <button>Dark mode</button>
     </div>
 </header>
+
+<script>
+    import "../../scripts/mobileMenu.js"
+</script>

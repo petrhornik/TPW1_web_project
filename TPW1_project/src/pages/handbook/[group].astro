@@ -15,13 +15,17 @@ const groupData = handbookData.find(item => {
     return item.id === group && item;
 })
 
+if (groupData?.id == "troubleshooting" || groupData === undefined || groupData?.id === "commands") {
+    Astro.rewrite("/errors/404");
+}
+
 
 ---
 
 <BaseLayout>
     <section class="page-content">
         <section class="page-introduction">
-            <h2>{groupData.name ? groupData.name : "Stránka nenalezena"}</h2>
+            <h2>{groupData?.name ? groupData.name : "Stránka nenalezena"}</h2>
         </section>
         <section class="page-content-main page-content-main--row">
             <aside class="">

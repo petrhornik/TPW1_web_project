@@ -36,6 +36,7 @@
         --color-surface: #1C1C1C;
         --color-background: #EEF0F2;
         --color-component-background: #FAFAFF;
+        --color-component-background-secondary: #48466D;
         --color-text: #1C1C1C;
         --color-text-light: #FFF8F2;
         --color-danger: #dc3545;
@@ -43,13 +44,22 @@
         --color-warning: #ffc107;
     }
 
+    /* experimental TBD */
     &[data-theme="dark"] {
-        --primary: black;
-        --secondary: white;
-        --warning: yellow;
-        --danger: red;
-        --success: green;
-    }
+    --color-primary: #93AEC9;
+    --color-primary-hover: #AEC7DE;
+    --color-secondary: #D4B6BE;
+    --color-surface: #202630;
+    --color-background: #151A22;
+    --color-component-background: #242B36;
+    --color-component-background-secondary: #3C3A59;
+    --color-text: #E8EDF5;
+    --color-text-light: #FFF8F2;
+    --color-danger: #FF7785;
+    --color-success: #6FD39C;
+    --color-warning: #F5C96A;
+    --color-on-primary: #151A22;
+}
 }
 
 body {
@@ -144,10 +154,19 @@ main{
 
 /* hl styling rozložení stránky */
 
+
+/* defaultní styling pro page content -> 1 sloupec pomocí flexu */
 .page-content{
     display: flex;
     flex-direction: column;
+    align-items: center;
     scroll-margin-top: calc(var(--navbar-height) + 1rem);
+}
+
+/* to samé ale pomocí gridu s 2 sloupci */
+
+.page-content-grid{
+    display: grid;
 }
 
 .page-introduction h2{
@@ -162,6 +181,24 @@ main{
 
 .page-content-main{
     display: flex;
+}
+
+.section-introduction{
+    display: flex;
+}
+
+.section-introduction h2{
+    font-size: 2rem;
+}
+
+/* groupování article content-boxů pro možnosti spoučení menších skupinek na stránce do řádku */
+
+.article-group{
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    align-items: center;
+    gap: var(--spacing-lg);
 }
 
 /* stylizace komponentu pro box s obsahem */
@@ -183,7 +220,7 @@ main{
 }
 
 .content-box__texts{
-    width: 50%;
+    width: 60%;
 }
 
 .content-box__headline{
@@ -266,9 +303,78 @@ main{
     color: var(--color-text-light);
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: 0.2s;
 }
 
-.btn--sm{
-
+.btn:hover{
+    transform: scale(1.05);
+    background-color: var(--color-primary-hover);
 }
 
+@media (max-width: 768px) {
+
+    /* Úprava obecné stylizace pro veškeré prvky */
+
+    /* vypnutí některých elementů */
+
+    .desktop-only{
+        display: none;
+    }
+
+    /* Přizpůsobení pro mobilní zařízení */
+
+    .hero__content{
+        flex-direction: column-reverse;
+    }
+
+    .hero__content img{
+        width: 15rem;
+    }
+
+    .hero__content h1{
+        font-size: 3rem;
+    }
+
+    .hero__content h2{
+        font-size: 1.2rem;
+    }
+
+    .page-introduction{
+        text-align: center;
+    }
+
+    .article-group{
+        flex-direction: column;
+    }
+
+    .content-box{
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+
+    .content-box__headline{
+        text-align: center;
+    }
+
+    .content-box__headline p {
+        text-align: left;
+    }
+
+    .content-box__img{
+        width: 60%;
+    }
+
+    .content-box__texts{
+        width: 100%;
+    }
+    
+    .content-box__texts ol {
+        text-align: left;
+    }
+}
+
+/* experiments */
+
+.test{
+    background-color: var(--color-component-background-secondary);
+}

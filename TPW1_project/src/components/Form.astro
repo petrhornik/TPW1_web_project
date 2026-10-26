@@ -1,0 +1,18 @@
+---
+ const {data = {}, destinationLink = "https://www.google.com", formMethod = "GET"} = Astro.props;
+---
+
+<section class="form">
+    <form action={destinationLink} method={formMethod} class="form__container">
+        <h3 class="form__headline">{data.headline}</h3>
+        <p class="form__main">{data.main}</p>
+        <div class="form__inputs">
+            {
+                data.inputs.map((input: any) => {
+                    return <input type={input.type} name={input.name} placeholder={input.placeholder} required={input.required} class="form__input" />
+                })
+            }
+        </div>
+        <button type="submit" class="btn form__btn">{data.btnText}</button>
+    </form>
+</section>
