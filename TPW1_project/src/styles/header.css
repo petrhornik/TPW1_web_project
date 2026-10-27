@@ -41,7 +41,7 @@ header {
 .navigation-menu__list li{
     cursor: pointer;
     transition: 0.2s;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .navigation-menu__list li:hover{
